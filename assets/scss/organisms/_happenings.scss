@@ -1,0 +1,31 @@
+.spo-happenings{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: $spacer-6 $spacer-0;
+    .spo-moduletitle{
+        text-transform: uppercase;
+        color: $color-white;
+        margin-bottom: $spacer-2;
+    }
+
+    &__tile-wrap{
+        width: 100%;
+        overflow: hidden;
+
+        .spo-news-tile{
+            width: calc(33% - $spacer-3);
+            margin: $spacer-1 $spacer-2;
+        }
+    }
+
+    &__btn-wrap{
+        width: 100%;
+        display: flex;
+        margin: $spacer-3 $spacer-0;
+        .spo-btn{
+            margin: 0 auto;
+        }
+    }
+}
