@@ -29,7 +29,7 @@
     &__featurehead {
         font-size: 20px;
         font-weight: $font-semi-bold;
-        margin-bottom: $spacer-2;
+        margin-bottom: $spacer-1;
         color: $color-grey2;
     }
 
@@ -52,5 +52,25 @@
         font-size: 12px;
         color: $color-white;
         text-align: center;
+    }
+}
+
+@include mobile {
+    .spo-spec {
+        padding: $spacer-5 0;
+
+        &__outer {
+            flex-direction: column-reverse;
+        }
+
+        &__left {
+            text-align: center;
+            margin-top: $spacer-5;
+            width: 100%;
+        }
+
+        &__right {
+            width: 100%;
+        }
     }
 }
