@@ -11,9 +11,10 @@
 @import "./atoms/heading";
 @import "./atoms/button";
 // molecule
-
+@import "./molecules/news-card";
 // organisms
 @import "./organisms/our-story";
+@import "./organisms/happenings";
 @import "./organisms/specification";
 @import "./organisms/mobile-ignition";
 // pages
