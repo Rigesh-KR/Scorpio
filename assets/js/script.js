@@ -1,3 +1,4 @@
+//   Happenig module start
 $('.spo-happenings__tile-wrap').slick({
     dots: false,
     infinite: true,
@@ -32,3 +33,4 @@ $('.spo-happenings__tile-wrap').slick({
       }
     ]
   });
+//   Happenig module end
