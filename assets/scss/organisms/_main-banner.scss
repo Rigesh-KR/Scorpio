@@ -1,0 +1,25 @@
+.spo-banner {
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+  &__tile {
+    position: relative;
+  }
+  &__cont {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    color: #fff;
+  }
+}
