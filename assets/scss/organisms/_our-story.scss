@@ -1,0 +1,27 @@
+.spo-ourstory {
+    color: $color-white;
+    background-color: $color-black1;
+
+    .spo-moduletitle {
+        margin-bottom: $spacer-3;
+    }
+
+    &__outer {
+        display: flex;
+        align-items: center;
+    }
+
+    &__left {
+        padding: $spacer-4;
+        width: 50%;
+
+        p {
+            font-size: 15px;
+            margin-bottom: $spacer-3;
+        }
+    }
+
+    &__right {
+        width: 50%;
+    }
+}
