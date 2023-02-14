@@ -10,8 +10,18 @@
     background-size: cover;
     background-position: top center;
   }
+
+  &__tile-wrap {
+    // min-height: 100vh;
+  }
   &__tile {
     position: relative;
+    // min-height: 100vh;
+  }
+  &__outer {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
   }
   &__cont {
     position: relative;
@@ -21,5 +31,21 @@
     justify-content: center;
     height: 100%;
     color: #fff;
+  }
+  .slick-dots {
+    bottom: 5px;
+
+    li {
+      width: 40px;
+      height: 4px;
+      background-color: #506375;
+
+      &.slick-active {
+        background-color: $color-white;
+      }
+    }
+  }
+  .slick-dotted.slick-slider {
+    margin-bottom: $spacer-0;
   }
 }
