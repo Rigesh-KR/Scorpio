@@ -3,8 +3,9 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
+    padding: $spacer-6 $spacer-0;
     .spo-moduletitle{
+        text-transform: uppercase;
         color: $color-white;
         margin-bottom: $spacer-2;
     }
@@ -16,6 +17,19 @@
         .spo-news-tile{
             width: calc(33% - $spacer-3);
             margin: $spacer-1 $spacer-2;
+        }
+    }
+
+    &__btn-wrap{
+        width: 100%;
+        display: flex;
+        margin: $spacer-3 $spacer-0;
+        .spo-btn{
+            width: unset;
+            display: inline-block;
+            text-transform: uppercase;
+            margin: 0 auto;
+            padding: $spacer-2 $spacer-6;
         }
     }
 }
