@@ -154,3 +154,34 @@ $(".spo-banner__tile-wrap").slick({
   ],
 });
 //   main banner end
+var points = gsap.utils.toArray(".items");
+  var height = 100 * points.length;
+  var tl = gsap.timeline({
+    duration: points.length,
+    scrollTrigger: {
+      trigger: ".spo-VT",
+      start: "top bottom",
+      end: "+=" + height + "%",
+      scrub: true,
+      id: "points"
+    }
+  });
+  var pinner = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".spo-VT .spo-VT-col",
+      start: "top top",
+      end: "+=" + height + "%",
+      scrub: false,
+      pin: ".spo-VT .spo-VT-col",
+      pinSpacing: true,
+      id: "pinning",
+    }
+  });
+
+  points.forEach(function (elem, i) {
+    gsap.set(elem, { position: "absolute", top: 0 });
+    tl.from(elem.querySelector("video"), { autoAlpha: 0 }, i);
+    if (i != points.length - 1) {
+      tl.to(elem.querySelector("video"), { autoAlpha: 0, scale:1.5 }, i + 0.90);
+    }
+  });
