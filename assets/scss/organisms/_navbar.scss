@@ -1,0 +1,219 @@
+.spo-body{
+  padding:102px 0 $spacer-6;
+}
+.spo-sidenav {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index:5;
+  top: 0;
+  right: -300px;
+  background-color: $color-grey1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  &-col {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-top: 10%;
+    padding-left: $spacer-5;
+  }
+  &__item{
+    // display: flex;
+    // align-items: center;
+    margin-bottom:$spacer-4;
+  }
+  &__link{
+    text-decoration: none;
+    color:$color-white;
+    font-size:14px;
+    font-weight: $font-light;
+    position: relative;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    &:hover {
+      color: $color-red;
+    }
+    &.active {
+        color: $color-red;
+    }
+  }
+  &__sub{
+    border-left: 2px solid $color-red;
+    padding-left: $spacer-3;
+    margin: $spacer-3 0 0;
+    &-item{
+      margin-bottom: $spacer-3;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.spo-overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index:3;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s;
+  }
+.spo-header{
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  transition: all 0.3s;
+  background-color: transparent;
+  padding: $spacer-3 0;
+  align-items: center;
+  &__logo-col{
+    width: 10%;
+  }
+  &__logo{
+    &-img{
+      width: 80px;
+      transition: all 0.3s;
+    }
+  }
+  &_closebtn{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 3;
+    img{
+      transition: all 0.3s;
+      width:18px;
+      &:hover{
+        scale: 1.1;
+      }
+    }
+    }
+  &__quickNav{
+    order: 3;
+    display: flex;
+    transition: all 0.3s;
+    &-out{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-item{
+      padding: 0 10px;
+      display: flex;
+    }
+    &-link{
+      color: $color-white;
+      display: flex;
+      align-items: center;
+      &:hover{
+        color: $color-red;
+      }
+    }
+    &-orderNow{
+      font-size: $spacer-3;
+      background-color:$color-red;
+      color: $color-white;
+      display: flex;
+      padding:2px 10px 0;
+      position: relative;
+      border: 0;
+      &:hover{
+        border: 0;
+      }
+      &::after {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 100%;
+        background-color: $color-white;
+        left: 0;
+        top: 0;
+        transition: 0.3s;
+        z-index: -1;
+        opacity: 0.3;
+      }
+      &:hover::after {
+        width: 100%;
+        transition: 0.3s;
+        opacity: 1;
+        color: $color-black;
+      }
+    }
+  }
+  &__toggler{
+    color: $color-white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  &__R{
+    display: flex;
+    align-items: center;
+    order: 3;
+    width: 10%;
+  }
+  &__cart{
+    margin-left: $spacer-3;
+  }
+  &__sociable{
+    display: flex;
+    justify-content: left;
+    &-link{
+      margin: 0 $spacer-3 0 0;
+    }
+    &-img{
+      height: 18px;
+      transition: all 0.3s;
+      &:hover{
+        scale: 1.1;
+        opacity: 0.9;
+      }
+    }
+  }
+  &.sticky {
+    position: fixed;
+    width: 100%;
+    padding:10px 0;
+    transition: all 0.3s;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    .spo-header__logo-img{
+      width:50px;
+      transition: all 0.3s;
+    }
+  }
+}
+@include mobile{
+  .spo-header{
+    &__quickNav, &__cart{
+      display: none;
+    }
+    &__logo-col{
+      width: auto;
+    }
+    &__R{
+      width: auto;
+    }
+    &_closebtn{
+      right: 20px;
+      img{
+        width: 35px
+      }
+    }
+    &__item{
+      margin-bottom: $spacer-3
+    }
+    &__link{
+      font-size: 18px;
+    }
+  }
+}
