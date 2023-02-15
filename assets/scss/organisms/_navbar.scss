@@ -1,6 +1,9 @@
 .spo-body{
   padding:102px 0 $spacer-6;
 }
+html {
+  scroll-behavior: smooth;
+}
 .spo-sidenav {
   height: 100%;
   width: 300px;
@@ -94,7 +97,10 @@
       transition: all 0.3s;
       width:18px;
       &:hover{
-        scale: 1.1;
+        scale: 1.2;
+        opacity: 0.6;
+        transition: all 0.3s;
+        //transform: rotate(90deg);
       }
     }
     }
@@ -206,7 +212,7 @@
     &_closebtn{
       right: 20px;
       img{
-        width: 35px
+        width:18px
       }
     }
     &__item{
