@@ -60,8 +60,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         border: 1px solid $color-white;
         border-radius: 50%;
         padding: $spacer-2;
@@ -69,8 +69,9 @@
         margin-right: $spacer-3;
         box-shadow: 0px 0px 10px 5px rgba(225, 37, 27, 0.75);
 
-        svg {
-            width: 100%;
+        img {
+            width: 20px;
+            height: 20px;
         }
     }
 
@@ -78,5 +79,15 @@
 
     &__btnsec {
         margin-top: $spacer-3;
+    }
+}
+
+
+@include mobile {
+    .spo-mob-ign {
+
+        &__left {
+            width: 100%;
+        }
     }
 }

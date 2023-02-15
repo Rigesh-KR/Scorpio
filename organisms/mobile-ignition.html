@@ -15,7 +15,7 @@
   </head>
   <body>
     <!-- Our Starts start -->
-    <div class="spo-mob-ign">
+    <div class="spo-mob-ign" style="background-image: url('../assets/images/mobile-ignition-bg.png');">
         <div class="spo-mob-ign__video">
             <video src="../assets/images/mc-X1-landingPage04.mp4"  width="100%" height="auto" autoplay="" loop="" muted=""></video>
         </div>
@@ -32,65 +32,49 @@
             <div class="spo-mob-ign__itemwrap">
                 <div class="spo-mob-ign__features">
                     <div class="spo-mob-ign__featureimg">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="31" viewBox="0 0 23 31">
-                            <image id="icn-lock" width="23" height="31" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAfCAYAAAAMeVbNAAABoElEQVRIie2Wz0tUURTHPzOI4ohIGARJEBSY62jjqpYuWrip/yBy1x/QP1AbA8GdrVu1kFwJ/QOCCxeBqOCiQKgosib6NR85wxl8PWSccd5yvnB5j/PO/Zx7z733vIt6XrunrqmHakv9qW6rT9Ub3fp2A19T1z1VgL+oxwXbvwzSF3xG3U3AvvpYnVYb6oR6S31WCPKyV3hN3cpOb9TxLrO7o35N3ye9wBfTeS9Het6aLKT/cc6uK3wznR/0AO60jeyzVLTX+V9TwDzwG3hL73qdnneLPcrwSaABfAY+9QF/l8/LReNIyck+gEVtA4+AnaKx1k78qWaA98ARcHWAYG2V09JJRWtQMKW03MyRh0aBuQsG+AMctN/UK6VjXoVeqZdi5MvAfeBj7pK/Z8yqH00DD2M7x4L+ytxfBz5cEFhUpPYwkhLwyGsTmKgA3NGPOC/13Bm1PDxVqJG8VnkrVqohfAgfwiuA17NuNytiNpNXj7L6HRgHbgO7FcBngbEoXlEVV4Gl/BDld1AFOLQSf6K4rr1Qv+XFctAW17vn6sgJHwqm6cZvdJoAAAAASUVORK5CYII="/>
-                          </svg>
+                        <img src="../assets/images/lock-icon.svg" alt="">
                     </div>
                     <p>Lock/Unlock</p>
                 </div>
                 <div class="spo-mob-ign__features">
                     <div class="spo-mob-ign__featureimg">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29" height="33" viewBox="0 0 29 33">
-                            <image id="icn_bike_locator" data-name="icn bike locator" width="29" height="33" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAhCAYAAAAlK6DZAAAEA0lEQVRIiaWXW6iVRRTHf8fKvKUdrWMqZg/RRet0hDjmhW5aoqYFafhShEH5UKZodbpAUZYU4UtRIBEVVCiYkSWVIl18ULpioqZdvJRl6MksTU37xdTaNm33Ptv9NfDt/c03a63/zJq1/mumQaVg6wPMB4YDh4AG4A3g3prmEmiBp4/6g7pc7av2UIeqX6sr1YaObJ5YcJULgHXAVcCDwGRgOXAesAGYDjwb3zuX6e4t4t5GYBUwBmgDxgNzgWkBuBqYAkwEPgV6AV2ArqH/VZGVnhF72C1WkvZ0G/Ai8BmwE+gJ/Bme6AT8AhwoGehUAHQL/L0tLQHSFiuZBewB+gPfhuzHwMaQ+bcVDKSbI2DOUj9X2+N/mrpFvTTkBqqD1MZcPzd0q/qeukldrF5RBpQi9DJ1qnqL/7Q7Ymxk/L+jLqo1aTLhXeokdZh6t7pfvV8drn6gro/VbIz+qgA+O2zcHjZqeir9zFM3hwueUF9Rh0Q/tT0hM0Y9qczAw+o2dbS6Tx2rnn48oGvVayPR31Tnq7+q56qz1FdrGFkZk7sz+lvVJ2uBJtc+EuClgbnq2+pgdV0N0BQoj2f9S9Tf1AUdMVKvYI0ewae7gWGR6BcD7TVSaCtwT9ZP5DAQ+C50247RUBeGC2eru9Wd6idqN3VHpEGRtBocbh9Vyb391B8jGEaot8Vg2tsNBQFLz6OVbJRe5sSsSv0roz/wf4I2ROWZmH8v0WC/+H8G6A0sBWYA2wvQ5H92D1gGzCzf0y4xm0QMS9XD6ksxq1PUmRHdKfm7Fljt1ZEB3XP3jgy2Se+t6kfxfp36s/qh+py6IvpT6gTtGfZbctDEpavLBEfEnt4Q/fPVpphIapfXCfxFENDRPD0Svs9bqvqzgUVRvs6M+nhj5GQq2qOihl5QpvsHcD3wffbtcFbEjx5XGjKBpiCMdOh6HtgFDA2ieB14ADghyGRZnA66ByGUAA6WTSQB/p6DfgmcGkrbQ6lzsFMCeypkU0H+CWiNVefeSWOPVYngppDfnIOuBU4GmgO0PSgwnQTmxLEyKV4E7AAGxOlhHzABGAKsAd6tAjohXL4+TxminOXVpCUCpr86OSrHCxF0qYQ11xFEC8P+MYzUGvnZNxt8SD1QZiClzF11ADYGnzdXAk3P++prFUL95Xhfoq6pM1WWRH5X5N70DAiXTs2+9Q3XvqV+o/auA/Am9UjYrQpKUGFq47Jv4wsQwujQuabSeCWF0klvRvbttDoA7wv96dVkqimmFR+MfW45TrDWoNNDURqrynZ0l0l3lnnApMjfxD4r4hiyPxgpnebHAuOAQVlJTDlctR3PBSrdXdIt7ELgnKC0vXFfScY3xdXh6bjHdNyAvwAM9bLSJPblTwAAAABJRU5ErkJggg=="/>
-                          </svg>                          
+                        <img src="../assets/images/bike-locator-icon.svg" alt="">                         
                     </div>
                     <p>Bike Locator</p>
                 </div>
                 <div class="spo-mob-ign__features">
                     <div class="spo-mob-ign__featureimg">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="36" viewBox="0 0 22 36">
-                            <image id="icn_anti_theft" data-name="icn anti theft" width="22" height="36" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAkCAYAAACNBsqdAAADWklEQVRIia2WSajXVRTHP09fNilK4lNfCU2LskFQImjRAInUQomy3ATWwpI2bSRaNBBpREEujJSoaCILXpSCQQOUBQ2LyHKlpDRSj7KcIn3pJ+7z+7Pbv//wXnjg8ju/e8/53nPPdC9quzFd3eox2qTeUslcrw5l7St1TjuMTsCPRPFhdXf4g+qe8MPqmvCvtsPoG0X/L20D+oGLsnQtsBQ4GXgjo9A7wDxgoBWiKPcBtwNzMncYuAB4tJJ7N6OVXsmm9wfrKPAN8Fwx+4Uc6Q/1sP/Q3A5uqse0Sn5/3FXodcJ8UAmvzNwu9Sn1OnWeOqAOqpepi9Wn1Z1VLBr9jYZ5IIvr1MmZu0p9Xv1WPZT1I+rR8CPq9+rL6pXRmaTel/W1zS4PVkfaoC5Iyp2pXpKxVF2iXhw3lROcps5XH1f3Rv+x1qw4B1gGrKmC+CMwDOxLRpj5KcCM6PRF/m1gRYLHhCrKu4GN4YeAK4ANwHbgL2A/cAAYAXYCLwE3A2cnG47EkGNUOX0wR3lTnTKGjKjHosRgSzNXWzw5373AYDVfrFpb/Z8LPAOckf/iooM5/axGqAYux1sF3Ap8Vim2o75q7g7gQ2ArsLKdK5pxTVyyaoxu+EHdNtYmtCn5O9ADtMnbS8cCfFOSv9D2BLWd3F1V7pe2MKMT8Cx1fVUkV1e9454Uy1R1YVpAoSfUZanEX9TlqcDjwBPUjyP8bLXZ7Kb2s8nv4b9Wb6zkLky6FVrRavGSdKfSD76MJXWOl2CuTrk38+fndHui96R6XivwQ9lxqDrqrpYNmlH6xebqJO+FX93q4xuycHelvLByz3cJaknFTzL3k3pvVaWL27lic/zWLvqlLX5UZcAO9Ta1v43sp+rnNfD7saRbzhalfT1kXkt2HC/pQ8BJXUq40M/ADmAqsL5Dyfen+/2rV/SiScBE4JQePcRmh/HQzFh+Zy+d8VhMQGd2ccX/Bp6Ym2I43xMGfDrwG7Au19QJA/4VOAt4K5dpRxpv8AZyCy/oJThei0eSdnN75f14gYt/ZwMvAtO7CTauKJU3WjFdqMhM6+GKP5M5o8CLgPnAqXnJlMdHq++LpeUdXJ4Fy6vXUHNbF50CenkeN6NN6Is0+PIM7UYHqvdZJyo4W1T+BsoijplWxW+CAAAAAElFTkSuQmCC"/>
-                          </svg>
+                        <img src="../assets/images/battery-icon.svg" alt="">
                     </div>
                     <p>Battery Status & Estimated Range</p>
                 </div>
                 <div class="spo-mob-ign__features">
                     <div class="spo-mob-ign__featureimg">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="31" viewBox="0 0 23 31">
-                            <image id="icn-lock" width="23" height="31" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAfCAYAAAAMeVbNAAABoElEQVRIie2Wz0tUURTHPzOI4ohIGARJEBSY62jjqpYuWrip/yBy1x/QP1AbA8GdrVu1kFwJ/QOCCxeBqOCiQKgosib6NR85wxl8PWSccd5yvnB5j/PO/Zx7z733vIt6XrunrqmHakv9qW6rT9Ub3fp2A19T1z1VgL+oxwXbvwzSF3xG3U3AvvpYnVYb6oR6S31WCPKyV3hN3cpOb9TxLrO7o35N3ye9wBfTeS9Het6aLKT/cc6uK3wznR/0AO60jeyzVLTX+V9TwDzwG3hL73qdnneLPcrwSaABfAY+9QF/l8/LReNIyck+gEVtA4+AnaKx1k78qWaA98ARcHWAYG2V09JJRWtQMKW03MyRh0aBuQsG+AMctN/UK6VjXoVeqZdi5MvAfeBj7pK/Z8yqH00DD2M7x4L+ytxfBz5cEFhUpPYwkhLwyGsTmKgA3NGPOC/13Bm1PDxVqJG8VnkrVqohfAgfwiuA17NuNytiNpNXj7L6HRgHbgO7FcBngbEoXlEVV4Gl/BDld1AFOLQSf6K4rr1Qv+XFctAW17vn6sgJHwqm6cZvdJoAAAAASUVORK5CYII="/>
-                          </svg>
+                        <img src="../assets/images/antitheft-alert.svg" alt="">
                     </div>
                     <p>Anti-Theft Alert</p>
                 </div>
                 <div class="spo-mob-ign__features">
                     <div class="spo-mob-ign__featureimg">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="31" viewBox="0 0 23 31">
-                            <image id="icn-lock" width="23" height="31" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAfCAYAAAAMeVbNAAABoElEQVRIie2Wz0tUURTHPzOI4ohIGARJEBSY62jjqpYuWrip/yBy1x/QP1AbA8GdrVu1kFwJ/QOCCxeBqOCiQKgosib6NR85wxl8PWSccd5yvnB5j/PO/Zx7z733vIt6XrunrqmHakv9qW6rT9Ub3fp2A19T1z1VgL+oxwXbvwzSF3xG3U3AvvpYnVYb6oR6S31WCPKyV3hN3cpOb9TxLrO7o35N3ye9wBfTeS9Het6aLKT/cc6uK3wznR/0AO60jeyzVLTX+V9TwDzwG3hL73qdnneLPcrwSaABfAY+9QF/l8/LReNIyck+gEVtA4+AnaKx1k78qWaA98ARcHWAYG2V09JJRWtQMKW03MyRh0aBuQsG+AMctN/UK6VjXoVeqZdi5MvAfeBj7pK/Z8yqH00DD2M7x4L+ytxfBz5cEFhUpPYwkhLwyGsTmKgA3NGPOC/13Bm1PDxVqJG8VnkrVqohfAgfwiuA17NuNytiNpNXj7L6HRgHbgO7FcBngbEoXlEVV4Gl/BDld1AFOLQSf6K4rr1Qv+XFctAW17vn6sgJHwqm6cZvdJoAAAAASUVORK5CYII="/>
-                          </svg>
+                        <img src="../assets/images/charging-station-icon.svg" alt="">
                     </div>
                     <p>Charging Station Locator</p>
                 </div>
                 <div class="spo-mob-ign__features">
                     <div class="spo-mob-ign__featureimg">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="31" viewBox="0 0 23 31">
-                            <image id="icn-lock" width="23" height="31" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAfCAYAAAAMeVbNAAABoElEQVRIie2Wz0tUURTHPzOI4ohIGARJEBSY62jjqpYuWrip/yBy1x/QP1AbA8GdrVu1kFwJ/QOCCxeBqOCiQKgosib6NR85wxl8PWSccd5yvnB5j/PO/Zx7z733vIt6XrunrqmHakv9qW6rT9Ub3fp2A19T1z1VgL+oxwXbvwzSF3xG3U3AvvpYnVYb6oR6S31WCPKyV3hN3cpOb9TxLrO7o35N3ye9wBfTeS9Het6aLKT/cc6uK3wznR/0AO60jeyzVLTX+V9TwDzwG3hL73qdnneLPcrwSaABfAY+9QF/l8/LReNIyck+gEVtA4+AnaKx1k78qWaA98ARcHWAYG2V09JJRWtQMKW03MyRh0aBuQsG+AMctN/UK6VjXoVeqZdi5MvAfeBj7pK/Z8yqH00DD2M7x4L+ytxfBz5cEFhUpPYwkhLwyGsTmKgA3NGPOC/13Bm1PDxVqJG8VnkrVqohfAgfwiuA17NuNytiNpNXj7L6HRgHbgO7FcBngbEoXlEVV4Gl/BDld1AFOLQSf6K4rr1Qv+XFctAW17vn6sgJHwqm6cZvdJoAAAAASUVORK5CYII="/>
-                          </svg>
+                        <img src="../assets/images/incident-detection-icon.svg" alt="">
                     </div>
                     <p>Incident Detection</p>
                 </div>
                 <div class="spo-mob-ign__features">
                     <div class="spo-mob-ign__featureimg">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="31" viewBox="0 0 23 31">
-                            <image id="icn-lock" width="23" height="31" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAfCAYAAAAMeVbNAAABoElEQVRIie2Wz0tUURTHPzOI4ohIGARJEBSY62jjqpYuWrip/yBy1x/QP1AbA8GdrVu1kFwJ/QOCCxeBqOCiQKgosib6NR85wxl8PWSccd5yvnB5j/PO/Zx7z733vIt6XrunrqmHakv9qW6rT9Ub3fp2A19T1z1VgL+oxwXbvwzSF3xG3U3AvvpYnVYb6oR6S31WCPKyV3hN3cpOb9TxLrO7o35N3ye9wBfTeS9Het6aLKT/cc6uK3wznR/0AO60jeyzVLTX+V9TwDzwG3hL73qdnneLPcrwSaABfAY+9QF/l8/LReNIyck+gEVtA4+AnaKx1k78qWaA98ARcHWAYG2V09JJRWtQMKW03MyRh0aBuQsG+AMctN/UK6VjXoVeqZdi5MvAfeBj7pK/Z8yqH00DD2M7x4L+ytxfBz5cEFhUpPYwkhLwyGsTmKgA3NGPOC/13Bm1PDxVqJG8VnkrVqohfAgfwiuA17NuNytiNpNXj7L6HRgHbgO7FcBngbEoXlEVV4Gl/BDld1AFOLQSf6K4rr1Qv+XFctAW17vn6sgJHwqm6cZvdJoAAAAASUVORK5CYII="/>
-                          </svg>
+                        <img src="../assets/images/trip-summary-icon.svg" alt="">
                     </div>
                     <p>Trip Summary</p>
                 </div>
                 <div class="spo-mob-ign__features">
                     <div class="spo-mob-ign__featureimg">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="31" viewBox="0 0 23 31">
-                            <image id="icn-lock" width="23" height="31" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAfCAYAAAAMeVbNAAABoElEQVRIie2Wz0tUURTHPzOI4ohIGARJEBSY62jjqpYuWrip/yBy1x/QP1AbA8GdrVu1kFwJ/QOCCxeBqOCiQKgosib6NR85wxl8PWSccd5yvnB5j/PO/Zx7z733vIt6XrunrqmHakv9qW6rT9Ub3fp2A19T1z1VgL+oxwXbvwzSF3xG3U3AvvpYnVYb6oR6S31WCPKyV3hN3cpOb9TxLrO7o35N3ye9wBfTeS9Het6aLKT/cc6uK3wznR/0AO60jeyzVLTX+V9TwDzwG3hL73qdnneLPcrwSaABfAY+9QF/l8/LReNIyck+gEVtA4+AnaKx1k78qWaA98ARcHWAYG2V09JJRWtQMKW03MyRh0aBuQsG+AMctN/UK6VjXoVeqZdi5MvAfeBj7pK/Z8yqH00DD2M7x4L+ytxfBz5cEFhUpPYwkhLwyGsTmKgA3NGPOC/13Bm1PDxVqJG8VnkrVqohfAgfwiuA17NuNytiNpNXj7L6HRgHbgO7FcBngbEoXlEVV4Gl/BDld1AFOLQSf6K4rr1Qv+XFctAW17vn6sgJHwqm6cZvdJoAAAAASUVORK5CYII="/>
-                          </svg>
+                        <img src="../assets/images/smart-navigation-icon.svg" alt="">
                     </div>
                     <p>Smart Navigation</p>
                 </div>
