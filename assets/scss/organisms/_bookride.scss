@@ -1,7 +1,7 @@
 .spo-bookride {
    color: $color-white;
    background-color: $color-black;
-
+   position: relative;
    &__contents {
       display: flex;
       padding: $spacer-6 $spacer-0;
