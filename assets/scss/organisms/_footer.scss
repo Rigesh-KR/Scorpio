@@ -1,0 +1,266 @@
+.spo-footer {
+    color: $color-white;
+    font-size: 14px;
+
+    &__mainsec {
+        padding: $spacer-6 0;
+        background-color: $color-grey1;
+    }
+
+    &__outer {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        // margin: 0 -8px;
+    }
+
+    &__left {
+        width: calc(60% - 16px);
+        margin: 0 $spacer-2;
+        display: flex;
+    }
+
+    &__right {
+        width: calc(35% - 16px);
+        display: flex;
+        align-self: center;
+        color: $color-grey3;
+    }
+    &__logo {
+        //margin-bottom: $spacer-3;
+        width: 125px;
+        padding: 0 20px 0 0;
+        display: flex;
+        align-self: center;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__find {
+        width: calc(50%);
+        margin: 0 $spacer-2 $spacer-3;
+
+        .spo-footer__seclink {
+            margin-top: $spacer-2;
+        }
+
+        p {
+            // margin-bottom: $spacer-1;
+        }
+    }
+
+    &__explore {
+        width: calc(50%);
+        margin: 0 $spacer-2;
+    }
+    &__fndUs{
+        margin-bottom: $spacer-2;
+        color: $color-grey3;
+        &-subHead{
+            display: block;
+        } 
+    }
+    &__listing {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item{
+        margin-bottom: $spacer-2;
+        color: $color-grey3;
+        width: 50%;
+        transition: 0.3s;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__link {
+        color: $color-grey3;
+        transition: 0.3s;
+        &:hover {
+            color: $color-white;
+            text-decoration: underline;
+            //opacity: 0.6;
+            transition: 0.3s;
+        }
+    }
+    &__sechead {
+        font-weight: $font-bold;
+        font-size: 18px;
+        margin-bottom: $spacer-3;
+    }
+    &__social {
+        display: flex;
+        align-items: center;
+        margin: $spacer-3 -10px 0;
+    }
+    &__socialimg {
+        width: 20px;
+        height: 20px;
+        margin: 0 10px;
+        transition: 0.3s;
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+    }
+    &__logosec {
+        background-color: $color-grey;
+        padding: $spacer-5 0;
+    }
+    &__logoouter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        p {
+            color: $color-white;
+        }
+    }
+    &__copysec {
+        padding: $spacer-3 0;
+        background-color: $color-grey;
+        color: $color-grey3;
+    }
+    &__copyouter {
+        display: flex;
+        justify-content: center;
+        margin: 0 -16px;
+        font-size: 12px;
+    }
+    &__rights {
+        display: flex;
+        align-items: center;
+        margin: 0 $spacer-3;
+
+        p {
+            margin: 0 $spacer-2;
+        }
+    }
+    &__privacy {
+        display: flex;
+        align-items: center;
+        margin: 0 $spacer-3;
+
+        .spo-footer__link {
+            margin: 0 $spacer-2 0;
+        }
+    }
+}
+@include mobile {
+    .spo-footer {
+        color: $color-grey3;
+        &__mainsec {
+            padding: $spacer-6 0;
+            background-color: $color-grey1;
+        }
+        &__outer {
+            flex-direction: column;
+        }
+        &__left {
+            width: calc(100% - 16px);
+            flex-direction: column;
+        }
+        &__right {
+            width: calc(100% - 16px);
+        }
+        &__find {
+            width: calc(100% - 16px);
+            text-align: center;
+        }
+        &__explore {
+            width: calc(100% - 16px);
+            .spo-footer__sechead {
+                display: none;
+            }
+        }
+
+        &__listing {
+            flex-direction: column;
+        }
+        &__item{
+            margin-bottom: $spacer-1;
+            padding: $spacer-3 0;
+            position: relative;
+            width: 100%;
+
+            &::after {
+                position: absolute;
+                content: '';
+                width: calc(100% + 60px);
+                height: 1px;
+                background-color: $color-grey;
+                top: 0;
+                left: -30px;
+            }
+
+            &:last-child {
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: calc(100% + 60px);
+                    height: 1px;
+                    background-color: $color-grey;
+                    bottom: 0;
+                    left: -30px;
+                }
+            }
+        }
+        &__social {
+            justify-content: center;
+            margin-bottom: $spacer-3;
+        }
+
+        &__socialimg {
+            svg {
+                path {
+                    fill: $color-white;
+                }
+            }
+        }
+
+        &__logo {
+            width:80px;
+            img{
+                width:50px;
+            }
+        }
+        &__sg-desc{
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+        }
+
+        &__copyouter {
+            font-size: 10px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__privacy {
+            .spo-footer__seclink {
+                margin: $spacer-2 $spacer-3 0;
+            }
+        }
+
+        &__rights {
+            margin: 0;
+
+            p {
+                margin: 0 $spacer-1;
+            }
+        }
+    }
+
+}
