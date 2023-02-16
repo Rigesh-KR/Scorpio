@@ -13,9 +13,17 @@
 // molecule
 @import "./molecules/news-card";
 // organisms
+@import "organisms/navbar";
 @import "organisms/footer";
+@import "./organisms/video-tran";
+@import "./organisms/our-story";
+@import "./organisms/happenings";
+@import "./organisms/specification";
+@import "./organisms/mobile-ignition"; 
+@import "./organisms/main-banner";
 @import "./organisms/our-story";
 @import "./organisms/happenings";
 @import "./organisms/specification";
 @import "./organisms/shop";
 @import "./organisms/bookride";
+// pages
