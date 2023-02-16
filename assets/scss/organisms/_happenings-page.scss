@@ -1,4 +1,5 @@
-.spo-happenings {
+.spo-happenings-page {
+  padding: $spacer-6 0;
     &__head-wrap {
       display: flex;
       justify-content: space-between;
@@ -14,6 +15,7 @@
       margin-top: -16px;
       .select-selected{
         padding-left: 60px;
+        background-color: transparent;
       }
       label{
         position: absolute;
@@ -50,7 +52,7 @@
   }
 }
 @include mobile{
-  .spo-happenings{
+  .spo-happenings-page{
       .spo-news-tile{
           &__title{
               font-size: 14px;
