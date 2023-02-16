@@ -1,15 +1,30 @@
 .spo-bookride{
+   position: relative;
    color: $color-white;
    background-color: $color-black;
+   background-repeat: no-repeat;
+   background-position: top right;
+   background-size: contain;
+
+   &__overlay{
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+   }
 
    &__contents{
       display: flex;
       padding: $spacer-6 $spacer-0;
-      min-height: 100vh;
    }
    &__form,
    &__model{
       width: 50%;
+      position: relative;
+   }
+   &__form{
+      margin-right: $spacer-4;
    }
    &__form-wrap{
       width: 100%;
@@ -60,7 +75,7 @@
             display: flex;
             align-items: center;
             color: $color-grey3;
-            background-color: $color-black;
+            background-color: transparent;
             height: 35px;
             width: 100%;
             border-bottom: 2px solid $color-white;
@@ -102,6 +117,30 @@
          .select-items div:hover, .same-as-selected {
             background-color: $color-red;
          }
+      }
+   }
+   &__model-imgsec{
+      img{
+         width: 100%;
+         height: auto;
+      }
+   }
+}
+
+@include mobile{
+   .spo-bookride{
+      &__contents{
+         flex-direction: column-reverse;
+      }
+      &__form,
+      &__model{
+         width: 100%;
+      }
+      &__form{
+         margin-top: $spacer-4;
+      }
+      &__form-wrap{
+         max-width: 100%;
       }
    }
 }
