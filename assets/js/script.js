@@ -223,7 +223,7 @@ var points = gsap.utils.toArray(".items");
 // custom dropdown
 var x, i, j, l, ll, selElmnt, a, b, c;
 /*look for any elements with the class "custom-select":*/
-x = document.getElementsByClassName("spo-bookride__form-selectwrap");
+x = document.getElementsByClassName("spo-selectBox");
 l = x.length;
 for (i = 0; i < l; i++) {
    selElmnt = x[i].getElementsByTagName("select")[0];

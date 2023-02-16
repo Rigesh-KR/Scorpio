@@ -10,6 +10,8 @@
 // atoms
 @import "./atoms/heading";
 @import "./atoms/button";
+@import "./atoms/select-box";
+@import "./atoms/pagination";
 // molecule
 @import "./molecules/news-card";
 // organisms
@@ -27,4 +29,5 @@
 @import "./organisms/specification";
 @import "./organisms/shop";
 @import "./organisms/bookride";
+@import "./organisms/happenings-page";
 // pages
