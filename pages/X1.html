@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../assets/css/slick.css">
     <link rel="stylesheet" href="../assets/css/slick-theme.css">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/gijgo.min.css">
     <link rel="stylesheet" href="../assets/css/style.css" />
     <!-- styles -->
     <title>Scorpio Electric</title>
@@ -169,7 +170,7 @@
               <p class="spo-spec__featuredesc">2.5 hrs to 90% charge</p>
           </div>
         </div>
-        <div class="spo-spec__right">
+        <div class="spo-spec__right" >
           <div class="spo-spec__clicksec">
               <img src="../assets/images/spec-scooter.png" alt="">
           </div>
@@ -253,7 +254,9 @@
 </div>
 <!-- Mobile Ignition end -->
 <!-- book ride start -->
-<section class="spo-bookride">
+<!-- book ride start -->
+<section class="spo-bookride" style="background-image: url('../assets/images/bookride-background.png');">
+  <div class="spo-bookride__overlay" style="background-image: url('../assets/images/bookride-overlay.png');"></div>
   <div class="content-wrapper">
      <div class="spo-bookride__contents">
         <div class="spo-bookride__form">
@@ -280,14 +283,9 @@
                     <label for="" class="spo-bookride__form-label">(COUNTRY CODE) CONTACT NUMBER</label>
                  </div>
                  <div class="spo-bookride__form-inputwrap">
-                    <div class="spo-selectBox">
-                       <select name="" id="" class="spo-bookride__form-select">
-                          <option value="" class="spo-bookride__form-select-opt" selected>CHOOSE A DATE</option>
-                          <option value="" class="spo-bookride__form-select-opt">Option one</option>
-                          <option value="" class="spo-bookride__form-select-opt">Option two</option>
-                          <option value="" class="spo-bookride__form-select-opt">Option three</option>
-                          <option value="" class="spo-bookride__form-select-opt">Option four</option>
-                       </select>
+                    <div class="spo-bookride__form-datepickwrap">
+                       <input id="datepicker" placeholder="CHOOSE A DATE"
+                       autocomplete="off" class="spo-bookride__form-datepickinp">
                     </div>
                  </div>
                  <div class="spo-bookride__form-inputwrap">
@@ -305,7 +303,11 @@
               </div>
            </div>
         </div>
-        <div class="spo-bookride__model"></div>
+        <div class="spo-bookride__model">
+           <div class="spo-bookride__model-imgsec">
+              <img src="../assets/images/bookride-bike.png" alt="" data-aos="fade-left" class="spo-bookride__model-img">
+           </div>
+        </div>
      </div>
   </div>
   </section>
@@ -408,10 +410,10 @@
   <script src="../assets/js/jquery.slim.min.js"></script>
   <script src="../assets/js/aos.js"></script>
   <script src="../assets/js/slick.min.js"></script>
-  <script src="../assets/js/bootstrap.bundle.min.js"></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js'></script>
-  <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/gijgo.min.js"></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js'></script>
+    <script src="../assets/js/script.js"></script>
   <!-- scripts -->
   <script>
     AOS.init({
