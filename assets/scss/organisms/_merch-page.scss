@@ -5,3 +5,19 @@
     }
 }
 
+@include mobile{
+    .pd-quick-view{
+        .spo-productsView{
+            flex-direction: column;
+            &__products{
+                width: 100%;
+            }
+            &__desc{
+                width: 100%;
+                padding: $spacer-4;
+                padding-top: $spacer-5;
+    
+            }
+        }
+    }
+}
