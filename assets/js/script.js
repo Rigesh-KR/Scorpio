@@ -276,3 +276,15 @@ then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 
 
+// date picker
+$('#datepicker').datepicker({
+   uiLibrary: 'bootstrap5',
+   open: function (e) {
+      e.target.parentElement.parentElement.classList.add('spo-bookride__form-datepickwrap--open');
+   },
+   close: function (e){
+     e.target.parentElement.parentElement.classList.remove('spo-bookride__form-datepickwrap--open');
+  }
+});
+
+// clientWidth

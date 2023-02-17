@@ -1,32 +1,43 @@
-.spo-bookride {
+.spo-bookride{
+   position: relative;
    color: $color-white;
    background-color: $color-black;
-   position: relative;
-   &__contents {
+   background-repeat: no-repeat;
+   background-position: top right;
+   background-size: contain;
+
+   &__overlay{
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+   }
+
+   &__contents{
       display: flex;
       padding: $spacer-6 $spacer-0;
-      min-height: 100vh;
    }
-
    &__form,
-   &__model {
+   &__model{
       width: 50%;
+      position: relative;
    }
-
-   &__form-wrap {
+   &__form{
+      margin-right: $spacer-4;
+   }
+   &__form-wrap{
       width: 100%;
       max-width: 430px;
    }
-
-   &__form-inputs {
+   &__form-inputs{
       margin-top: $spacer-4;
    }
-
-   &__form-inputwrap {
+   &__form-inputwrap{
       position: relative;
       margin-bottom: $spacer-4;
-
-      .spo-bookride__form-input {
+      
+      .spo-bookride__form-input{
          color: $color-white;
          border: none;
          border-bottom: 2px solid $color-white;
@@ -35,19 +46,17 @@
          height: 35px;
          line-height: 1;
 
-         &:focus~.spo-bookride__form-label,
-         &:valid~.spo-bookride__form-label {
+         &:focus ~ .spo-bookride__form-label,
+         &:valid ~ .spo-bookride__form-label{
             font-size: 10px;
             transform: translateY(-20px);
          }
-
-         &:required~.spo-bookride__form-label::after {
+         &:required ~ .spo-bookride__form-label::after{
             content: "*";
          }
 
       }
-
-      .spo-bookride__form-label {
+      .spo-bookride__form-label{
          pointer-events: none;
          position: absolute;
          top: 10px;
@@ -55,28 +64,24 @@
          color: $color-grey3;
          transition: all .3s ease-in-out;
       }
-
       .spo-bookride__form-selectwrap {
          position: relative;
 
          .spo-bookride__form-select {
-            display: none;
+            display: none; 
          }
-
          .select-selected {
             display: flex;
             align-items: center;
             color: $color-grey3;
-            background-color: $color-black;
+            background-color: transparent;
             height: 35px;
             width: 100%;
             border-bottom: 2px solid $color-white;
-
-            &.disabled {
+            &.disabled{
                color: $color-grey3;
             }
          }
-
          .select-selected:after {
             position: absolute;
             content: "";
@@ -87,12 +92,10 @@
             border: 6px solid transparent;
             border-color: $color-white transparent transparent transparent;
          }
-
          .select-selected.select-arrow-active:after {
             border-color: transparent transparent $color-white transparent;
             top: 7px;
          }
-
          .select-items {
             position: absolute;
             background-color: $color-grey1;
@@ -101,23 +104,118 @@
             right: 0;
             z-index: 9999;
          }
-
-         .select-items div {
+         .select-items div{
             cursor: pointer;
             text-align: center;
             color: $color-white;
             padding: $spacer-3 0;
          }
-
          .select-hide {
             display: none;
          }
-
-         .select-items div:hover,
-         .same-as-selected {
+         .select-items div:hover, .same-as-selected {
             background-color: $color-red;
-
          }
       }
+      .spo-bookride__form-datepickwrap{
+         position: relative;
+
+         .spo-bookride__form-datepickinp{
+            position: relative;
+            border: none;
+            color: $color-white;
+            background-color: transparent;
+            height: 35px;
+            padding: 0;
+            width: 100%;
+            border-radius: 0;
+            border-bottom: 2px solid $color-white;
+            &::placeholder{
+               color: $color-grey3;
+            }
+            & + button{
+               display: none;
+            }
+         }
+         &::after{
+            position: absolute;
+            content: "";
+            top: 14px;
+            right: 10px;
+            width: 0px;
+            height: 0px;
+            border: 6px solid transparent;
+            border-color: $color-white transparent transparent transparent;
+         }
+         &--open{
+            &::after{
+               border-color: transparent transparent $color-white transparent;
+               top: 7px;
+            }
+         }
+      }
+   }
+   &__model-imgsec{
+      img{
+         width: 100%;
+         height: auto;
+      }
+   }
+}
+
+@include mobile{
+   .spo-bookride{
+      &__contents{
+         flex-direction: column-reverse;
+      }
+      &__form,
+      &__model{
+         width: 100%;
+      }
+      &__form{
+         margin-top: $spacer-4;
+      }
+      &__form-wrap{
+         max-width: 100%;
+      }
+   }
+}
+
+.gj-picker{
+   color: $color-white;
+   background-color: $color-black;
+}
+
+
+.gj-picker-bootstrap table tr td.other-month div,
+.gj-picker-bootstrap table tr td.selected div,
+.gj-picker-bootstrap table tr td.current-month div{
+   border-radius: 50%;
+   overflow: hidden;
+   &:hover{
+      color: $color-white;
+      background-color: $color-red;
+      border-radius: 50%;
+   }
+}
+
+.gj-picker-bootstrap table tr td.today div{
+   border-radius: 50%;
+   color: $color-white;
+   background-color: $color-red;
+   overflow: hidden;
+   opacity: .5;
+   &:hover{
+      border-radius: 50%;
+   }
+}
+
+.gj-picker-bootstrap table tr td.selected div{
+   color: $color-white !important;
+   background-color: $color-red !important;
+   border-radius: 50% !important;
+   &:hover{
+      color: $color-white;
+      background-color: $color-red;
    }
 }
