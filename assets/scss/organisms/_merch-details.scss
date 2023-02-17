@@ -1,0 +1,51 @@
+.spo-merch-details{
+    .spo-productsView{
+        &__desc{
+            padding-top: 0;
+            padding-bottom: 0;
+            position: relative;
+        }
+        &__sizeChart{
+            margin-bottom: $spacer-5;
+            &-link{
+                font-size: 15px;
+                color: $color-white;
+                text-decoration: underline;
+                &:hover{
+                    color: $color-red;
+                }
+            }
+        }
+    }
+    .spo-merch__product-tag{
+        position: relative;
+        max-width: 110px;
+        margin-bottom: $spacer-3;
+    }
+    .spo-input__label{
+        font-size: 14px;
+        color: $color-white;
+    }
+    .spo-selectBox-wrap{
+        margin-bottom: $spacer-5;
+    }
+    .spo-selectBox{
+        width: 120px;
+    }
+}
+@include mobile{
+    .spo-merch-details{
+        .spo-productsView{
+            flex-direction: column;
+            &__products{
+                width: 100%;
+            }
+            &__desc{
+                width: 100%;
+                padding: 0;
+                padding-top: $spacer-5;
+    
+            }
+        }
+    }
+}

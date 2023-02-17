@@ -4,8 +4,22 @@
         justify-content: flex-start;
     }
     &__products{
-        display: flex;
+        // display: flex;
         width:50%;
+        &-dots [data-bs-target]{
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            margin: 0 10px;
+            background-color: $color-grey2;
+        }
+        &-dots{
+            margin: 0;
+            bottom: 20px;
+            .active{
+                background-color: $color-red;
+            }
+        }
     }
     &__desc{
         width: 50%;
@@ -36,14 +50,24 @@
         border-radius: 0;
         border: 1px solid $color-grey;
     }
+    &-contentTwo {
+        padding: $spacer-4;
+    }
     &__close{
         position: absolute;
         right:20px;
         top:20px;
+        z-index: 2;
     }
     &__SizeImg{
         max-width: 100%;
         margin-bottom: $spacer-2;
+    }
+    &__title{
+        color:$color-white;
+        font-size:25px;
+        margin-bottom: $spacer-3;
+        text-transform: uppercase;
     }
 }
 .modal.fade .modal-dialog {-webkit-transform: translate(0,0)scale(0);transform: translate(0,0)scale(0); transition: 0.9s;}
