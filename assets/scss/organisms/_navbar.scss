@@ -58,6 +58,9 @@ html {
     &.active {
         color: $color-red;
     }
+    &-normal{
+      text-transform: none;
+    }
   }
   &__sub{
     border-left: 2px solid $color-red;

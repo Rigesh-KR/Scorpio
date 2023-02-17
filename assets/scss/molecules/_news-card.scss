@@ -28,6 +28,13 @@
         min-height: 70px;
         margin-bottom: $spacer-2;
     }
+    &__link{
+        font-size: 18px;
+        color: $color-white;
+        &:hover{
+            color: red;
+        }
+    }
 
     &__date{
         font-size: 18px;
