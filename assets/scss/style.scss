@@ -12,11 +12,14 @@
 @import "./atoms/button";
 @import "./atoms/select-box";
 @import "./atoms/pagination";
+@import "./atoms/input";
 // molecule
 @import "./molecules/news-card";
 @import "./molecules/merch-tile";
 @import "./molecules/modal-popup";
 @import "./molecules/product-details-view";
+@import "./molecules/accordion";
+
 // organisms
 @import "organisms/navbar";
 @import "organisms/footer";
@@ -38,4 +41,7 @@
 @import "./organisms/merch-details";
 @import "./organisms/our-management";
 @import "./organisms/aboutus-page";
+@import "./organisms/contact-page";
+@import "./organisms/career";
+@import "./organisms/apply";
 // pages

@@ -1,0 +1,56 @@
+.contact-warp{
+    padding-top: $spacer-6;
+    .spo-title{
+        margin-bottom: $spacer-3;
+    }
+}
+.spo-cnt{
+    display: flex;
+    &-L{
+        width: 50%;
+    }
+    &-R{
+        width: 50%;
+        padding-left: 35px;
+    }
+    &-address{
+        padding: $spacer-3 0;
+        &-title{
+            font-size: 14px;
+            font-weight: $font-bold;
+            color: $color-white;
+        }
+        &-text{
+            font-size: 14px;
+            font-weight: $font-light;
+            margin-bottom: $spacer-4;
+            color: $color-white;
+        }
+    }
+    .spo-input__label{
+        font-weight: $font-light;
+    }
+    .spo-input__text, .spo-dropdown__select{
+        border-radius: 0;
+        height: 30px;
+        min-height: auto;
+    }
+    .spo-dropdown__select{
+        padding: 0 12px 0 10px;
+    }
+    .spo-input__tarea{
+        height: 70px;
+    }
+    &-capcha{
+        margin-bottom: 24px;
+    }
+}
+@include mobile{
+    .spo-cnt{
+        flex-direction: column;
+        &-R{
+            padding-left: 0;
+            width:100%;
+        }
+    }
+}

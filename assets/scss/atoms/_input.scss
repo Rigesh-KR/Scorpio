@@ -1,0 +1,65 @@
+.spo-input {
+    position: relative;
+    margin-bottom: $spacer-4;
+    &__text {
+       color: $color-white;
+       border: none;
+       border-bottom: 2px solid $color-white;
+       width: 100%;
+       background-color: transparent;
+       height: 35px;
+       line-height: 1;
+       &:focus~.spo-input__label,
+       &:valid~.spo-input__label {
+          font-size: 10px;
+          transform: translateY(-20px);
+       }
+
+       &:required~.spo-input__label::after {
+          content: "*";
+       }
+
+    }
+
+    &__label {
+       pointer-events: none;
+       position: absolute;
+       top: 10px;
+       left: 0;
+       color: $color-grey3;
+       transition: all .3s ease-in-out;
+    }
+    &__filewrap {
+      position: relative;
+      
+      .spo-input__filebtn {
+        position: absolute;
+        background-color: $color-grey2;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        padding: 3px 8px;
+        min-width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        svg {
+          width: 25px;
+          height: 25px;
+        }
+      }
+  
+    }
+  
+    &__file {
+      display: flex;
+      align-items: center;
+  
+      &::file-selector-button {
+        display: none;
+      }
+    }
+}
