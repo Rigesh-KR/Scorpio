@@ -8,7 +8,7 @@
     &__video {
         position: absolute;
         width: 100%;
-        height: auto;
+        height: 100%;
         top: 0;
         left: 0;
 
@@ -86,6 +86,9 @@
 
 @include mobile {
     .spo-mob-ign {
+        &__outer {
+            padding-top: $spacer-5;
+        }
 
         &__left {
             width: 100%;
