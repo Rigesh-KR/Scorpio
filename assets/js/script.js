@@ -155,7 +155,7 @@ $(".spo-banner__tile-wrap").slick({
   ],
 });
 //   main banner end
-var points = gsap.utils.toArray(".items");
+var points = gsap.utils.toArray(".spo-VT-items"); 
 var height = 100 * points.length;
 var tl = gsap.timeline({
   duration: points.length,
