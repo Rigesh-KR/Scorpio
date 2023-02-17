@@ -1,0 +1,53 @@
+.spo-our-mng {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: $spacer-6 0 0;
+
+    .spo-news-tile {
+        width: calc(33.33% - 32px);
+        margin: 0 $spacer-3;
+        margin-bottom: 50px;
+    }
+
+    &__head {
+        margin-bottom: 50px;
+
+        .spo-moduletitle {
+            margin-bottom: $spacer-2;
+        }
+    }
+
+}
+
+@include tablet {
+    .spo-our-mng {
+
+        .spo-news-tile {
+            width: calc(50% - 32px);
+            margin: 0 $spacer-3;
+            margin-bottom: $spacer-4;
+        }
+
+        &__head {
+            margin-bottom: $spacer-6;
+        }
+
+    }
+}
+
+@include mobile {
+    .spo-our-mng {
+
+        .spo-news-tile {
+            width: calc(100% - 32px);
+            margin: 0 $spacer-3;
+            margin-bottom: $spacer-4;
+        }
+
+        &__head {
+            margin-bottom: $spacer-6;
+        }
+
+    }
+}
