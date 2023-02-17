@@ -1,0 +1,62 @@
+.spo-productsView{
+    display: flex;
+    .spo-pd__desc{
+        justify-content: flex-start;
+    }
+    &__products{
+        display: flex;
+        width:50%;
+    }
+    &__desc{
+        width: 50%;
+        padding:$spacer-6  ;
+        display: flex;
+        flex-direction: column;
+    }
+    &__title{
+        font-size:28px;
+        color:$color-white;
+        margin-bottom: 16px;
+        font-weight:$font-bold;
+    }
+    &__price {
+        font-size:24px;
+        color:$color-red;
+        margin-bottom: 16px;
+        font-weight:$font-bold;
+    }
+}
+.spo-modal {
+    &__dialog {
+        max-width:765px;
+    }
+    &-content {
+        border: 0;
+        background-color:#000000;
+        border-radius: 0;
+        border: 1px solid $color-grey;
+    }
+    &__close{
+        position: absolute;
+        right:20px;
+        top:20px;
+    }
+    &__SizeImg{
+        max-width: 100%;
+        margin-bottom: $spacer-2;
+    }
+}
+.modal.fade .modal-dialog {-webkit-transform: translate(0,0)scale(0);transform: translate(0,0)scale(0); transition: 0.9s;}
+.modal.show .modal-dialog{-webkit-transform: translate(0,0)scale(1);transform: translate(0,0)scale(1); opacity: 1; transition: 0.7s;}
+@include mobile {
+    .spo-modal{
+        &__pdQuickView{
+            flex-direction: column;
+            &__desc{
+                width: 100%;
+                padding-left: 0;
+                padding-top: 30px;
+            }
+        }
+    }
+}

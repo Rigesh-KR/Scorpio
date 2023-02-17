@@ -186,11 +186,19 @@ var points = gsap.utils.toArray(".items");
       tl.to(elem.querySelector("video"), { autoAlpha: 0, scale:1.5 }, i + 0.90);
     }
   });
-
+  $('.product-w').slick({
+    dots: true,
+    infinite: false,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    // autoplay: true,
+    // autoplaySpeed: 2000,
+ });
 // custom dropdown
 var x, i, j, l, ll, selElmnt, a, b, c;
 /*look for any elements with the class "custom-select":*/
-x = document.getElementsByClassName("spo-bookride__form-selectwrap");
+x = document.getElementsByClassName("spo-selectBox");
 l = x.length;
 for (i = 0; i < l; i++) {
    selElmnt = x[i].getElementsByTagName("select")[0];
@@ -266,3 +274,5 @@ function closeAllSelect(elmnt) {
 /*if the user clicks anywhere outside the select box,
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
+
+
