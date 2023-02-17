@@ -1,0 +1,19 @@
+.spo-aboutus {
+    &.spo-body {
+        background-image: none;
+    }
+
+    .spo-banner {
+        margin-top: -100px;
+        height: 600px;
+    }
+}
+
+@include mobile {
+    .spo-aboutus {
+
+        .spo-banner {
+            height: 400px;
+        }
+    }
+}
