@@ -16,6 +16,7 @@
 @import "./molecules/news-card";
 @import "./molecules/merch-tile";
 @import "./molecules/modal-popup";
+@import "./molecules/product-details-view";
 // organisms
 @import "organisms/navbar";
 @import "organisms/footer";
@@ -32,9 +33,9 @@
 @import "./organisms/shop";
 @import "./organisms/bookride";
 @import "./organisms/happenings-page";
-@import "./organisms/happenings-details";
 @import "./organisms/pageDetails";
 @import "./organisms/merch-page";
+@import "./organisms/merch-details";
 @import "./organisms/our-management";
 @import "./organisms/aboutus-page";
 // pages
