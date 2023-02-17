@@ -1,0 +1,20 @@
+.spo-merch-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -$spacer-3;
+    margin-right: -$spacer-3;
+    .spo-merch{
+        width: calc(33.33% - $spacer-5);
+        margin: 0 $spacer-3;
+        margin-bottom: 50px;
+    }
+}
+@include mobile{
+    .spo-merch-wrap{
+        .spo-merch{
+            width: calc(50% - $spacer-5);
+            margin: 0 $spacer-3;
+            margin-bottom:40px;
+        }
+    }
+}

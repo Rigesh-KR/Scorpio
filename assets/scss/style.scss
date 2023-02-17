@@ -10,12 +10,17 @@
 // atoms
 @import "./atoms/heading";
 @import "./atoms/button";
+@import "./atoms/select-box";
+@import "./atoms/pagination";
 // molecule
 @import "./molecules/news-card";
+@import "./molecules/merch-tile";
+@import "./molecules/modal-popup";
 // organisms
 @import "organisms/navbar";
 @import "organisms/footer";
 @import "./organisms/video-tran";
+@import "./organisms/merch-tile-wrap";
 @import "./organisms/our-story";
 @import "./organisms/happenings";
 @import "./organisms/specification";
@@ -26,4 +31,8 @@
 @import "./organisms/specification";
 @import "./organisms/shop";
 @import "./organisms/bookride";
+@import "./organisms/happenings-page";
+@import "./organisms/happenings-details";
+@import "./organisms/pageDetails";
+@import "./organisms/merch-page";
 // pages

@@ -1,0 +1,62 @@
+.spo-merch{
+    &__product{
+        position: relative;
+    }
+    &__quick-view{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index:1;
+        align-items: center;
+    }
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 15px;
+    }
+    &__title{
+        font-size: 15px;
+        font-weight: $font-regular;
+        margin-bottom: $spacer-3;
+        height:35px;
+        &-link{
+            font-size: 15px;
+            font-weight: $font-regular;
+            color: $color-white;
+            text-decoration: none;
+            transition: 0.7s;
+            &:hover{
+                color: $color-red;
+            }
+        }
+    }
+    &__price{
+        font-size:15px;
+        font-weight: $font-regular;
+        color: $color-red;
+    }
+    &-btn{
+        font-size: 15px;
+        // min-width: 200px;
+        display: inline-flex;
+        padding: 10px;
+        justify-content: center;
+    }
+    &__L{
+        width: 65%;
+    }
+    &__R{
+        width: 35%;
+        text-align: right;
+    }
+    .spo-btn{
+        width: 100%;
+    }
+}
+// @include mobile {
+//     .spo-merch{
+//         &__body{
+//             flex-direction: column;
+//         }
+//     }
+// }

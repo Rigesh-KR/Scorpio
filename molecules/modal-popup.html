@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- styles -->
+  <link rel="stylesheet" href="../assets/css/slick.css">
+  <link rel="stylesheet" href="../assets/css/slick-theme.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <title>Scorpio Modal</title>
+</head>
+
+<body>
+  <div style="padding: 30px;">
+    <!-- body content start -->
+        <button type="button" class="" data-bs-toggle="modal" data-bs-target="#size-chart">
+          Size Chart
+        </button>
+    <!-- body content end -->
+  </div>
+  
+  <!-- Modal Size Chart-->
+  <div class="modal  fade " id="size-chart" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered spo-modal__dialog ">
+      <div class="modal-content spo-modal-content">
+        <button type="button" class="spo-modal__close" data-bs-dismiss="modal" aria-label="Close">
+          <img src="../assets/images/model-close.svg" style="width:35px ;"></button>
+        <div class="modalbody spo-modal__body">
+            <h2 class="spo-modal__title">Clothing Guide</h2>
+            <img src="../assets/images/size-chart.png" class="spo-modal__SizeImg">
+            <p class="spo-modal__body-text mb-4">
+              *NOTE:<br>
+              Fitting will vary even for same side articles<br>
+              Allow an error of 1 centimetre for measurements
+            </p>     
+            <h2 class="spo-modal__title">How to measure clothing</h2>   
+            <img src="../assets/images/measure.png" class="spo-modal__SizeImg mb-0">   
+        </div>
+      </div>
+    </div>
+  </div> 
+  <!-- Modal Size Chart END-->
+  <div style="padding: 30px;">
+    <!-- body content start -->
+        <button type="button" class="text-white" data-bs-toggle="modal" data-bs-target="#pd-quick-view">
+          Quick View
+        </button>
+    <!-- body content end -->
+  </div>
+  <!-- Modal Size Chart-->
+  <div class="modal fade" id="pd-quick-view" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered spo-modal__dialog ">
+      <div class="modal-content spo-modal-content">
+        <button type="button" class="spo-modal__close" data-bs-dismiss="modal" aria-label="Close">
+          <img src="../assets/images/close-btn2.png" style="width:18px ;"></button>
+        <div class="modalbody spo-modal__body">
+            <div class="spo-productsView">
+              <div class="spo-productsView__products">
+                <!-- ==================== -->
+
+                <div id="carouselExample" class="carousel slide">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="../assets/images/PDT-1.png" class="d-block w-100" alt="">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="../assets/images/PDT-1.png" class="d-block w-100" alt="">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="../assets/images/PDT-1.png" class="d-block w-100" alt="">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <img src="../assets/images/ArrowLeftCircle.png" style="width: 30px;" alt="">
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <img src="../assets/images/ArrowRightCircle.png" style="width: 30px;" alt="">
+                  </button>
+                </div>
+
+                <!-- ======================== -->
+              </div>
+              <div class="spo-productsView__desc">
+                <h2 class="spo-productsView__title mb-0">LIQUID METAL</h2>
+                <h3 class="spo-productsView__price">USD 45.00</h3>
+                <p class="spo-pageDetails__text">
+                  Scorpio Electric logo printed on left chest in front. A bold Scorpio text 
+                  print emblazoned vertically with a subtle satin sheen that is 
+                  velvety to the touch at the back.
+                </p>
+                <p class="spo-pageDetails__text mt-4">
+                  <strong>Material:</strong><br>
+                  Made from 100% combed and ring-spun premium cotton for the 
+                  ultimate softness and wearing comfort.
+                </p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <!-- Modal Size Chart END-->
+  <!-- scripts -->
+  <script src="../assets/js/jquery.slim.min.js"></script>
+  <script src="../assets/js/slick.min.js"></script>
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/script.js"></script>
+  <!-- scripts -->
+</body>
+
+</html>
