@@ -93,5 +93,9 @@
         &__left {
             width: 100%;
         }
+
+        &__features {
+            width: calc(100% - 8px);
+        }
     }
 }
