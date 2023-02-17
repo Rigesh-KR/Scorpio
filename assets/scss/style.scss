@@ -14,10 +14,13 @@
 @import "./atoms/pagination";
 // molecule
 @import "./molecules/news-card";
+@import "./molecules/merch-tile";
+@import "./molecules/modal-popup";
 // organisms
 @import "organisms/navbar";
 @import "organisms/footer";
 @import "./organisms/video-tran";
+@import "./organisms/merch-tile-wrap";
 // pages
 @import "./organisms/our-story";
 @import "./organisms/happenings";
@@ -32,4 +35,5 @@
 @import "./organisms/happenings-page";
 @import "./organisms/happenings-details";
 @import "./organisms/pageDetails";
+@import "./organisms/merch-page";
 // pages

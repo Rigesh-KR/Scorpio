@@ -185,41 +185,15 @@ var points = gsap.utils.toArray(".items");
       tl.to(elem.querySelector("video"), { autoAlpha: 0, scale:1.5 }, i + 0.90);
     }
   });
-// $('.spo-happenings__tile-wrap').slick({
-//    dots: false,
-//    infinite: true,
-//    speed: 800,
-//    slidesToShow: 3,
-//    slidesToScroll: 1,
-//    autoplay: true,
-//    autoplaySpeed: 2000,
-//    responsive: [
-//       {
-//          breakpoint: 1024,
-//          settings: {
-//             slidesToShow: 3,
-//             slidesToScroll: 1,
-//             infinite: true,
-//             dots: true
-//          }
-//       },
-//       {
-//          breakpoint: 600,
-//          settings: {
-//             slidesToShow: 2,
-//             slidesToScroll: 1
-//          }
-//       },
-//       {
-//          breakpoint: 480,
-//          settings: {
-//             slidesToShow: 1,
-//             slidesToScroll: 1
-//          }
-//       }
-//    ]
-// });
-
+  $('.product-w').slick({
+    dots: true,
+    infinite: false,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    // autoplay: true,
+    // autoplaySpeed: 2000,
+ });
 // custom dropdown
 var x, i, j, l, ll, selElmnt, a, b, c;
 /*look for any elements with the class "custom-select":*/
@@ -299,3 +273,5 @@ function closeAllSelect(elmnt) {
 /*if the user clicks anywhere outside the select box,
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
+
+
