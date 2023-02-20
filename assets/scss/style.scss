@@ -19,6 +19,7 @@
 @import "./molecules/modal-popup";
 @import "./molecules/product-details-view";
 @import "./molecules/accordion";
+@import "./molecules/shoppingCart-tile";
 
 // organisms
 @import "organisms/navbar";
@@ -44,4 +45,8 @@
 @import "./organisms/contact-page";
 @import "./organisms/career";
 @import "./organisms/apply";
+@import "./organisms/orderNow-page";
+@import "./organisms/shipping-details";
+@import "./organisms/shoppingCart-page";
+@import "./organisms/shoppingCart-tile-wrap";
 // pages
