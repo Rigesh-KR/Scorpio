@@ -4,7 +4,7 @@
     }
     &__tile{
         display: flex;
-        border-bottom: 1px solid #999999;
+        border-bottom: 1px solid $color-grey;
         padding-bottom: $spacer-5;
         margin-bottom:$spacer-5;
     }
@@ -22,15 +22,17 @@
     }
     &__tag{
         font-size: 12px;
-        color:$color-grey;
+        color:$color-white;
     }
     &__title{
         font-size: 18px;
         font-weight: $font-bold;
+        color: $color-white;
     }
     &__price{
         font-size: 18px;
         font-weight: $font-bold;
+        color: $color-white;
     }
 }
 @include mobile {
