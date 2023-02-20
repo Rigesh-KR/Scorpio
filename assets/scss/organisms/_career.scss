@@ -1,56 +1,74 @@
-.spo-career{
+.spo-career {
     padding: $spacer-6 0;
-    .spo-title{
-        margin-bottom:$spacer-1;
+
+    .spo-title {
+        margin-bottom: $spacer-1;
     }
-    &__body{
+
+    &__body {
         margin-bottom: $spacer-5;
         border-bottom: 1px solid $color-grey;
         padding-bottom: $spacer-5;
     }
-    &__text{
+
+    &__text {
         font-size: 14px;
         margin-bottom: $spacer-5;
         line-height: 26px;
         color: $color-white;
     }
-    &__subH{
+
+    &__subH {
         font-size: 15px;
         font-weight: $font-bold;
         margin-bottom: $spacer-3;
         color: $color-white;
     }
-    &__resp{
+
+    &__resp {
         margin: 0 0 $spacer-3 $spacer-2;
         padding: 0;
         list-style: none;
         color: $color-white;
-        &-list{
+
+        &-list {
             background-image: url("../images/resp-bullets.svg");
             background-repeat: no-repeat;
             background-position: left 15px;
             padding: 10px 0 10px 15px;
         }
     }
-    .accordion-button:not(.collapsed){
+
+    .accordion-button:not(.collapsed) {
         background-color: $color-black;
         color: $color-red;
     }
-    .accordion-item{
+
+    .accordion-item {
         background-color: $color-black;
         border-bottom: 1px solid $color-grey;
-        
+
     }
-    .accordion-button{
+
+    .accordion-button {
         background-color: $color-black;
         color: $color-white;
         font-size: 18px;
         font-weight: $font-bold;
         padding: $spacer-3 0;
-        &:focus{
+
+        &:focus {
             border: none;
             border-color: transparent;
             box-shadow: none;
         }
+    }
+
+    .spo-ourstory {
+        background-color: transparent;
+    }
+
+    .job-opening {
+        padding: $spacer-6 0;
     }
 }
