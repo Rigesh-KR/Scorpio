@@ -1,3 +1,6 @@
+.hiddenPag {
+    display: none;
+  }
 .spo-pagn{
     &__out{
         display: flex;
@@ -13,9 +16,27 @@
         color: $color-white;
         background-color: transparent;
         margin: 0 10px;
+        justify-content: center;
+        cursor: pointer;
         &:hover{
             color: #fff;
             background-color:$color-red;
+        }
+        &.active{
+            z-index: 3;
+            color: #fff;
+            background-color:$color-red;
+            border-radius:50% !important;
+            justify-content: center;
+        }
+        &.disabled{
+            z-index: 3;
+            color: #a8a5a5;
+            background-color: transparent;
+            border-radius: 50% !important;
+            justify-content: center;
+            pointer-events: none;
+            border-color: #dee2e6;
         }
     }
     .active .spo-pagn__link {
