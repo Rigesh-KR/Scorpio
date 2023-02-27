@@ -11,8 +11,46 @@
   <link rel="stylesheet" href="../assets/css/slick-theme.css">
   <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css" />
   <!-- styles -->
   <title>Stay Updated on Electric bike News, and Events | Scorpio Electric</title>
+  <style>
+    .hidden {
+  display: none;
+}
+
+.pagination-container {
+  width: calc(100% - 2rem);
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  padding: 1rem 0;
+  justify-content: center;
+}
+
+.pagination-number,
+.pagination-button{
+  font-size: 1.1rem;
+  background-color: transparent;
+  border: none;
+  margin: 0.25rem 0.25rem;
+  cursor: pointer;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: .2rem;
+}
+
+.pagination-number:hover,
+.pagination-button:not(.disabled):hover {
+  background: #fff;
+}
+
+.pagination-number.active {
+  color: #fff;
+  background: #0085b6;
+}
+
+  </style>
 </head>
 
 <body class="spo-body">
@@ -103,10 +141,11 @@
           </select>
         </div>
       </div>
-      <div class="spo-happenings-page__tile-wrap-page">
-        <!-- news card start -->
-        <div class="spo-news-tile">
-          <!-- image sec starts -->
+      <div >
+
+        <ul id="paginated-list" class="spo-happenings-page__tile-wrap-page">
+          <li class="spo-news-tile">
+            <!-- image sec starts -->
           <div class="spo-news-tile__img">
             <a href="../pages/happenings-details.html">
               <img src="../assets/images/news-tyle1.png" alt="">
@@ -124,283 +163,317 @@
             </div>
           </div>
           <!-- cnt ends -->
-        </div>
-        <!-- news card end -->
-
-        <!-- news card start -->
-        <div class="spo-news-tile">
-          <!-- image sec starts -->
-          <div class="spo-news-tile__img">
-            <a href="../pages/happenings-details.html">
-              <img src="../assets/images/news-tyle2.png" alt="">
-            </a>
-          </div>
-          <!-- image sec ends -->
-          <!-- cnt starts -->
-          <div class="spo-news-tile__cnt">
-            <div class="spo-news-tile__title">
-              <a href="../pages/happenings-details.html" class="spo-news-tile__link">
-                Scorpio Electric Ushers In New Era of Leadership
-              </a>
-            </div>
-            <div class="spo-news-tile__date">
-              August 16, 2022
-            </div>
-          </div>
-          <!-- cnt ends -->
-        </div>
-        <!-- news card end -->
-
-        <!-- news card start -->
-        <div class="spo-news-tile">
-          <!-- image sec starts -->
-          <div class="spo-news-tile__img">
-            <a href="../pages/happenings-details.html">
-              <img src="../assets/images/news-tyle3.png" alt="">
-            </a>
-          </div>
-          <!-- image sec ends -->
-          <!-- cnt starts -->
-          <div class="spo-news-tile__cnt">
-            <div class="spo-news-tile__title">
-              <a href="../pages/happenings-details.html" class="spo-news-tile__link">
-                Scorpio Electric launches pre-orders of the X1, the first Singapore electric motorcyle
-              </a>
-            </div>
-            <div class="spo-news-tile__date">
-              October 22, 2021
-            </div>
-          </div>
-          <!-- cnt ends -->
-        </div>
-        <!-- news card end -->
-        <!-- news card start -->
-        <div class="spo-news-tile">
-          <!-- image sec starts -->
-          <div class="spo-news-tile__img">
-            <a href="../pages/happenings-details.html">
-              <img src="../assets/images/news-tyle1.png" alt="">
-            </a>
-          </div>
-          <!-- image sec ends -->
-          <!-- cnt starts -->
-          <div class="spo-news-tile__cnt">
-            <div class="spo-news-tile__title">
-              <a href="../pages/happenings-details.html" class="spo-news-tile__link">
-                Scorpio Electric Clinched US$6.75 Million In Funding at Valuation of us$150 million
-              </a>
-            </div>
-            <div class="spo-news-tile__date">
-              January 12, 2023
-            </div>
-          </div>
-          <!-- cnt ends -->
-        </div>
-        <!-- news card end -->
-
-        <!-- news card start -->
-        <div class="spo-news-tile">
-          <!-- image sec starts -->
-          <div class="spo-news-tile__img">
-            <a href="../pages/happenings-details.html">
-              <img src="../assets/images/news-tyle2.png" alt="">
-            </a>
-          </div>
-          <!-- image sec ends -->
-          <!-- cnt starts -->
-          <div class="spo-news-tile__cnt">
-            <div class="spo-news-tile__title">
-              <a href="../pages/happenings-details.html" class="spo-news-tile__link">
-                Scorpio Electric Ushers In New Era of Leadership
-              </a>
-            </div>
-            <div class="spo-news-tile__date">
-              August 16, 2022
-            </div>
-          </div>
-          <!-- cnt ends -->
-        </div>
-        <!-- news card end -->
-
-        <!-- news card start -->
-        <div class="spo-news-tile">
-          <!-- image sec starts -->
-          <div class="spo-news-tile__img">
-            <a href="../pages/happenings-details.html">
-              <img src="../assets/images/news-tyle3.png" alt="">
-            </a>
-          </div>
-          <!-- image sec ends -->
-          <!-- cnt starts -->
-          <div class="spo-news-tile__cnt">
-            <div class="spo-news-tile__title">
-              <a href="../pages/happenings-details.html" class="spo-news-tile__link">
-                Scorpio Electric launches pre-orders of the X1, the first Singapore electric motorcyle
-              </a>
-            </div>
-            <div class="spo-news-tile__date">
-              October 22, 2021
-            </div>
-          </div>
-          <!-- cnt ends -->
-        </div>
-        <!-- news card end -->
-        <!-- news card start -->
-        <div class="spo-news-tile">
-          <!-- image sec starts -->
-          <div class="spo-news-tile__img">
-            <a href="../pages/happenings-details.html">
-              <img src="../assets/images/news-tyle1.png" alt="">
-            </a>
-          </div>
-          <!-- image sec ends -->
-          <!-- cnt starts -->
-          <div class="spo-news-tile__cnt">
-            <div class="spo-news-tile__title">
-              <a href="../pages/happenings-details.html" class="spo-news-tile__link">
-                Scorpio Electric Clinched US$6.75 Million In Funding at Valuation of us$150 million
-              </a>
-            </div>
-            <div class="spo-news-tile__date">
-              January 12, 2023
-            </div>
-          </div>
-          <!-- cnt ends -->
-        </div>
-        <!-- news card end -->
-
-        <!-- news card start -->
-        <div class="spo-news-tile">
-          <!-- image sec starts -->
-          <div class="spo-news-tile__img">
-            <a href="../pages/happenings-details.html">
-              <img src="../assets/images/news-tyle2.png" alt="">
-            </a>
-          </div>
-          <!-- image sec ends -->
-          <!-- cnt starts -->
-          <div class="spo-news-tile__cnt">
-            <div class="spo-news-tile__title">
-              <a href="../pages/happenings-details.html" class="spo-news-tile__link">
-                Scorpio Electric Ushers In New Era of Leadership
-              </a>
-            </div>
-            <div class="spo-news-tile__date">
-              August 16, 2022
-            </div>
-          </div>
-          <!-- cnt ends -->
-        </div>
-        <!-- news card end -->
-
-        <!-- news card start -->
-        <div class="spo-news-tile">
-          <!-- image sec starts -->
-          <div class="spo-news-tile__img">
-            <a href="../pages/happenings-details.html">
-              <img src="../assets/images/news-tyle3.png" alt="">
-            </a>
-          </div>
-          <!-- image sec ends -->
-          <!-- cnt starts -->
-          <div class="spo-news-tile__cnt">
-            <div class="spo-news-tile__title">
-              <a href="../pages/happenings-details.html" class="spo-news-tile__link">
-                Scorpio Electric launches pre-orders of the X1, the first Singapore electric motorcyle
-              </a>
-            </div>
-            <div class="spo-news-tile__date">
-              October 22, 2021
-            </div>
-          </div>
-          <!-- cnt ends -->
-        </div>
-        <!-- news card end -->
-
-        <!-- news card start -->
-        <div class="spo-news-tile">
-          <!-- image sec starts -->
-          <div class="spo-news-tile__img">
-            <a href="../pages/happenings-details.html">
-              <img src="../assets/images/news-tyle1.png" alt="">
-            </a>
-          </div>
-          <!-- image sec ends -->
-          <!-- cnt starts -->
-          <div class="spo-news-tile__cnt">
-            <div class="spo-news-tile__title">
-              <a href="../pages/happenings-details.html" class="spo-news-tile__link">
-                Scorpio Electric Clinched US$6.75 Million In Funding at Valuation of us$150 million
-              </a>
-            </div>
-            <div class="spo-news-tile__date">
-              January 12, 2023
-            </div>
-          </div>
-          <!-- cnt ends -->
-        </div>
-        <!-- news card end -->
-
-        <!-- news card start -->
-        <div class="spo-news-tile">
-          <!-- image sec starts -->
-          <div class="spo-news-tile__img">
-            <a href="../pages/happenings-details.html">
-              <img src="../assets/images/news-tyle2.png" alt="">
-            </a>
-          </div>
-          <!-- image sec ends -->
-          <!-- cnt starts -->
-          <div class="spo-news-tile__cnt">
-            <div class="spo-news-tile__title">
-              <a href="../pages/happenings-details.html" class="spo-news-tile__link">
-                Scorpio Electric Ushers In New Era of Leadership
-              </a>
-            </div>
-            <div class="spo-news-tile__date">
-              August 16, 2022
-            </div>
-          </div>
-          <!-- cnt ends -->
-        </div>
-        <!-- news card end -->
-
-        <!-- news card start -->
-        <div class="spo-news-tile">
-          <!-- image sec starts -->
-          <div class="spo-news-tile__img">
-            <a href="../pages/happenings-details.html">
-              <img src="../assets/images/news-tyle3.png" alt="">
-            </a>
-          </div>
-          <!-- image sec ends -->
-          <!-- cnt starts -->
-          <div class="spo-news-tile__cnt">
-            <div class="spo-news-tile__title">
-              <a href="../pages/happenings-details.html" class="spo-news-tile__link">
-                Scorpio Electric launches pre-orders of the X1, the first Singapore electric motorcyle
-              </a>
-            </div>
-            <div class="spo-news-tile__date">
-              October 22, 2021
-            </div>
-          </div>
-          <!-- cnt ends -->
-        </div>
-        <!-- news card end -->
-      </div>
-      <div class="spo-pagn__out">
-        <ul class="pagination spo-pagn">
-          <li class="page-item spo-pagn__item disabled"><a class="page-link spo-pagn__link"
-              href="javascript: history.back ()"><span aria-hidden="true">&laquo;</span></a></li>
-          <li class="page-item spo-pagn__item active"><a class="page-link spo-pagn__link"
-              href="./happenings-page.html">1</a></li>
-          <li class="page-item spo-pagn__item "><a class="page-link spo-pagn__link" href="./happening-page-2.html">2</a>
           </li>
-          <li class="page-item spo-pagn__item"><a class="page-link spo-pagn__link" href="./happenings-page-2.html"><span
-                aria-hidden="true">&raquo;</span></a></li>
+          <li class="spo-news-tile">
+            <!-- image sec starts -->
+          <div class="spo-news-tile__img">
+            <a href="../pages/happenings-details.html">
+              <img src="../assets/images/news-tyle2.png" alt="">
+            </a>
+          </div>
+          <!-- image sec ends -->
+          <!-- cnt starts -->
+          <div class="spo-news-tile__cnt">
+            <div class="spo-news-tile__title">
+              <a href="../pages/happenings-details.html" class="spo-news-tile__link">
+                Scorpio Electric Ushers In New Era of Leadership
+              </a>
+            </div>
+            <div class="spo-news-tile__date">
+              August 16, 2022
+            </div>
+          </div>
+          <!-- cnt ends -->
+          </li>
+          <li class="spo-news-tile">
+            <!-- image sec starts -->
+          <div class="spo-news-tile__img">
+            <a href="../pages/happenings-details.html">
+              <img src="../assets/images/news-tyle3.png" alt="">
+            </a>
+          </div>
+          <!-- image sec ends -->
+          <!-- cnt starts -->
+          <div class="spo-news-tile__cnt">
+            <div class="spo-news-tile__title">
+              <a href="../pages/happenings-details.html" class="spo-news-tile__link">
+                Scorpio Electric launches pre-orders of the X1, the first Singapore electric motorcyle
+              </a>
+            </div>
+            <div class="spo-news-tile__date">
+              October 22, 2021
+            </div>
+          </div>
+          <!-- cnt ends -->
+          </li>
+          <li class="spo-news-tile">
+            <!-- image sec starts -->
+          <div class="spo-news-tile__img">
+            <a href="../pages/happenings-details.html">
+              <img src="../assets/images/news-tyle1.png" alt="">
+            </a>
+          </div>
+          <!-- image sec ends -->
+          <!-- cnt starts -->
+          <div class="spo-news-tile__cnt">
+            <div class="spo-news-tile__title">
+              <a href="../pages/happenings-details.html" class="spo-news-tile__link">Scorpio Electric Clinched US$6.75
+                Million In Funding at Valuation of us$150 million</a>
+            </div>
+            <div class="spo-news-tile__date">
+              January 12, 2023
+            </div>
+          </div>
+          <!-- cnt ends -->
+          </li>
+          <li class="spo-news-tile">
+            <!-- image sec starts -->
+          <div class="spo-news-tile__img">
+            <a href="../pages/happenings-details.html">
+              <img src="../assets/images/news-tyle2.png" alt="">
+            </a>
+          </div>
+          <!-- image sec ends -->
+          <!-- cnt starts -->
+          <div class="spo-news-tile__cnt">
+            <div class="spo-news-tile__title">
+              <a href="../pages/happenings-details.html" class="spo-news-tile__link">
+                Scorpio Electric Ushers In New Era of Leadership
+              </a>
+            </div>
+            <div class="spo-news-tile__date">
+              August 16, 2022
+            </div>
+          </div>
+          <!-- cnt ends -->
+          </li>
+          <li class="spo-news-tile">
+            <!-- image sec starts -->
+          <div class="spo-news-tile__img">
+            <a href="../pages/happenings-details.html">
+              <img src="../assets/images/news-tyle3.png" alt="">
+            </a>
+          </div>
+          <!-- image sec ends -->
+          <!-- cnt starts -->
+          <div class="spo-news-tile__cnt">
+            <div class="spo-news-tile__title">
+              <a href="../pages/happenings-details.html" class="spo-news-tile__link">
+                Scorpio Electric launches pre-orders of the X1, the first Singapore electric motorcyle
+              </a>
+            </div>
+            <div class="spo-news-tile__date">
+              October 22, 2021
+            </div>
+          </div>
+          <!-- cnt ends -->
+          </li>
+          <li class="spo-news-tile">
+            <!-- image sec starts -->
+          <div class="spo-news-tile__img">
+            <a href="../pages/happenings-details.html">
+              <img src="../assets/images/news-tyle1.png" alt="">
+            </a>
+          </div>
+          <!-- image sec ends -->
+          <!-- cnt starts -->
+          <div class="spo-news-tile__cnt">
+            <div class="spo-news-tile__title">
+              <a href="../pages/happenings-details.html" class="spo-news-tile__link">Scorpio Electric Clinched US$6.75
+                Million In Funding at Valuation of us$150 million</a>
+            </div>
+            <div class="spo-news-tile__date">
+              January 12, 2023
+            </div>
+          </div>
+          <!-- cnt ends -->
+          </li>
+          <li class="spo-news-tile">
+            <!-- image sec starts -->
+          <div class="spo-news-tile__img">
+            <a href="../pages/happenings-details.html">
+              <img src="../assets/images/news-tyle2.png" alt="">
+            </a>
+          </div>
+          <!-- image sec ends -->
+          <!-- cnt starts -->
+          <div class="spo-news-tile__cnt">
+            <div class="spo-news-tile__title">
+              <a href="../pages/happenings-details.html" class="spo-news-tile__link">
+                Scorpio Electric Ushers In New Era of Leadership
+              </a>
+            </div>
+            <div class="spo-news-tile__date">
+              August 16, 2022
+            </div>
+          </div>
+          <!-- cnt ends -->
+          </li>
+          <li class="spo-news-tile">
+            <!-- image sec starts -->
+          <div class="spo-news-tile__img">
+            <a href="../pages/happenings-details.html">
+              <img src="../assets/images/news-tyle3.png" alt="">
+            </a>
+          </div>
+          <!-- image sec ends -->
+          <!-- cnt starts -->
+          <div class="spo-news-tile__cnt">
+            <div class="spo-news-tile__title">
+              <a href="../pages/happenings-details.html" class="spo-news-tile__link">
+                Scorpio Electric launches pre-orders of the X1, the first Singapore electric motorcyle
+              </a>
+            </div>
+            <div class="spo-news-tile__date">
+              October 22, 2021
+            </div>
+          </div>
+          <!-- cnt ends -->
+          </li>
+          <li class="spo-news-tile">
+            <!-- image sec starts -->
+          <div class="spo-news-tile__img">
+            <a href="../pages/happenings-details.html">
+              <img src="../assets/images/news-tyle1.png" alt="">
+            </a>
+          </div>
+          <!-- image sec ends -->
+          <!-- cnt starts -->
+          <div class="spo-news-tile__cnt">
+            <div class="spo-news-tile__title">
+              <a href="../pages/happenings-details.html" class="spo-news-tile__link">Scorpio Electric Clinched US$6.75
+                Million In Funding at Valuation of us$150 million</a>
+            </div>
+            <div class="spo-news-tile__date">
+              January 12, 2023
+            </div>
+          </div>
+          <!-- cnt ends -->
+          </li>
+          <li class="spo-news-tile">
+            <!-- image sec starts -->
+          <div class="spo-news-tile__img">
+            <a href="../pages/happenings-details.html">
+              <img src="../assets/images/news-tyle2.png" alt="">
+            </a>
+          </div>
+          <!-- image sec ends -->
+          <!-- cnt starts -->
+          <div class="spo-news-tile__cnt">
+            <div class="spo-news-tile__title">
+              <a href="../pages/happenings-details.html" class="spo-news-tile__link">
+                Scorpio Electric Ushers In New Era of Leadership
+              </a>
+            </div>
+            <div class="spo-news-tile__date">
+              August 16, 2022
+            </div>
+          </div>
+          <!-- cnt ends -->
+          </li>
+          <li class="spo-news-tile">
+            <!-- image sec starts -->
+          <div class="spo-news-tile__img">
+            <a href="../pages/happenings-details.html">
+              <img src="../assets/images/news-tyle3.png" alt="">
+            </a>
+          </div>
+          <!-- image sec ends -->
+          <!-- cnt starts -->
+          <div class="spo-news-tile__cnt">
+            <div class="spo-news-tile__title">
+              <a href="../pages/happenings-details.html" class="spo-news-tile__link">
+                Scorpio Electric launches pre-orders of the X1, the first Singapore electric motorcyle
+              </a>
+            </div>
+            <div class="spo-news-tile__date">
+              October 22, 2021
+            </div>
+          </div>
+          <!-- cnt ends -->
+          </li>
+          <li class="spo-news-tile">
+            <!-- image sec starts -->
+          <div class="spo-news-tile__img">
+            <a href="../pages/happenings-details.html">
+              <img src="../assets/images/news-tyle1.png" alt="">
+            </a>
+          </div>
+          <!-- image sec ends -->
+          <!-- cnt starts -->
+          <div class="spo-news-tile__cnt">
+            <div class="spo-news-tile__title">
+              <a href="../pages/happenings-details.html" class="spo-news-tile__link">Scorpio Electric Clinched US$6.75
+                Million In Funding at Valuation of us$150 million</a>
+            </div>
+            <div class="spo-news-tile__date">
+              January 12, 2023
+            </div>
+          </div>
+          <!-- cnt ends -->
+          </li>
+          <li class="spo-news-tile">
+            <!-- image sec starts -->
+          <div class="spo-news-tile__img">
+            <a href="../pages/happenings-details.html">
+              <img src="../assets/images/news-tyle2.png" alt="">
+            </a>
+          </div>
+          <!-- image sec ends -->
+          <!-- cnt starts -->
+          <div class="spo-news-tile__cnt">
+            <div class="spo-news-tile__title">
+              <a href="../pages/happenings-details.html" class="spo-news-tile__link">
+                Scorpio Electric Ushers In New Era of Leadership
+              </a>
+            </div>
+            <div class="spo-news-tile__date">
+              August 16, 2022
+            </div>
+          </div>
+          <!-- cnt ends -->
+          </li>
+          <li class="spo-news-tile">
+            <!-- image sec starts -->
+          <div class="spo-news-tile__img">
+            <a href="../pages/happenings-details.html">
+              <img src="../assets/images/news-tyle3.png" alt="">
+            </a>
+          </div>
+          <!-- image sec ends -->
+          <!-- cnt starts -->
+          <div class="spo-news-tile__cnt">
+            <div class="spo-news-tile__title">
+              <a href="../pages/happenings-details.html" class="spo-news-tile__link">
+                Scorpio Electric launches pre-orders of the X1, the first Singapore electric motorcyle
+              </a>
+            </div>
+            <div class="spo-news-tile__date">
+              October 22, 2021
+            </div>
+          </div>
+          <!-- cnt ends -->
+          </li>
+          
         </ul>
+      
+        <nav class="pagination-container">
+          <button class="pagination-button" id="prev-button" aria-label="Previous page" title="Previous page">
+            &lt;
+          </button>
+      
+          <div id="pagination-numbers">
+      
+          </div>
+      
+          <button class="pagination-button" id="next-button" aria-label="Next page" title="Next page">
+            &gt;
+          </button>
+        </nav>
+        
       </div>
+      
+
     </div>
   </div>
   <!-- footer start -->
@@ -513,7 +586,114 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js'></script>
   <script src="../assets/js/script.js"></script>
+  <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
   <!-- scripts -->
+
+  <script>
+    $(document).ready(function () {
+      $('#sm-table').DataTable();
+    });
+    const paginationNumbers = document.getElementById("pagination-numbers");
+const paginatedList = document.getElementById("paginated-list");
+const listItems = paginatedList.querySelectorAll("li");
+const nextButton = document.getElementById("next-button");
+const prevButton = document.getElementById("prev-button");
+
+const paginationLimit = 9;
+const pageCount = Math.ceil(listItems.length / paginationLimit);
+let currentPage = 1;
+
+const disableButton = (button) => {
+  button.classList.add("disabled");
+  button.setAttribute("disabled", true);
+};
+
+const enableButton = (button) => {
+  button.classList.remove("disabled");
+  button.removeAttribute("disabled");
+};
+
+const handlePageButtonsStatus = () => {
+  if (currentPage === 1) {
+    disableButton(prevButton);
+  } else {
+    enableButton(prevButton);
+  }
+
+  if (pageCount === currentPage) {
+    disableButton(nextButton);
+  } else {
+    enableButton(nextButton);
+  }
+};
+
+const handleActivePageNumber = () => {
+  document.querySelectorAll(".pagination-number").forEach((button) => {
+    button.classList.remove("active");
+    const pageIndex = Number(button.getAttribute("page-index"));
+    if (pageIndex == currentPage) {
+      button.classList.add("active");
+    }
+  });
+};
+
+const appendPageNumber = (index) => {
+  const pageNumber = document.createElement("button");
+  pageNumber.className = "pagination-number";
+  pageNumber.innerHTML = index;
+  pageNumber.setAttribute("page-index", index);
+  pageNumber.setAttribute("aria-label", "Page " + index);
+
+  paginationNumbers.appendChild(pageNumber);
+};
+
+const getPaginationNumbers = () => {
+  for (let i = 1; i <= pageCount; i++) {
+    appendPageNumber(i);
+  }
+};
+
+const setCurrentPage = (pageNum) => {
+  currentPage = pageNum;
+
+  handleActivePageNumber();
+  handlePageButtonsStatus();
+  
+  const prevRange = (pageNum - 1) * paginationLimit;
+  const currRange = pageNum * paginationLimit;
+
+  listItems.forEach((item, index) => {
+    item.classList.add("hidden");
+    if (index >= prevRange && index < currRange) {
+      item.classList.remove("hidden");
+    }
+  });
+};
+
+window.addEventListener("load", () => {
+  getPaginationNumbers();
+  setCurrentPage(1);
+
+  prevButton.addEventListener("click", () => {
+    setCurrentPage(currentPage - 1);
+  });
+
+  nextButton.addEventListener("click", () => {
+    setCurrentPage(currentPage + 1);
+  });
+
+  document.querySelectorAll(".pagination-number").forEach((button) => {
+    const pageIndex = Number(button.getAttribute("page-index"));
+
+    if (pageIndex) {
+      button.addEventListener("click", () => {
+        setCurrentPage(pageIndex);
+      });
+    }
+  });
+});
+
+  </script>
 </body>
 
 </html>
