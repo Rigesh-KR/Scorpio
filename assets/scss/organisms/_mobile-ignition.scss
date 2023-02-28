@@ -97,5 +97,17 @@
         &__features {
             width: calc(100% - 8px);
         }
+
+        &__mobonly {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__btnsec {
+            display: flex;
+            justify-content: center;
+        }
     }
 }
