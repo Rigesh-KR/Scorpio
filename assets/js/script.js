@@ -208,39 +208,6 @@ points.forEach(function(elem, i) {
   
 });
 // ============================Video Transition End  Here ==============================
-
-// var points = gsap.utils.toArray(".items");
-// var height = 100 * points.length;
-// var tl = gsap.timeline({
-//   duration: points.length,
-//   scrollTrigger: {
-//     trigger: ".spo-VT",
-//     start: "top bottom",
-//     end: "+=" + height + "%",
-//     scrub: true,
-//     id: "points"
-//   }
-// });
-// var pinner = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".spo-VT .spo-VT-col",
-//     start: "top top",
-//     end: "+=" + height + "%",
-//     scrub: false,
-//     pin: ".spo-VT .spo-VT-col",
-//     pinSpacing: true,
-//     id: "pinning",
-//   }
-// });
-
-// points.forEach(function (elem, i) {
-//   gsap.set(elem, { position: "absolute", top: 0 });
-//   tl.from(elem.querySelector("video"), { autoAlpha: 0 }, i);
-//   if (i != points.length - 1) {
-//     tl.to(elem.querySelector("video"), { autoAlpha: 0, scale: 1.5 }, i + 0.90);
-//   }
-// });
-
 $('.product-w').slick({
   dots: true,
   infinite: false,
@@ -343,14 +310,14 @@ $('#datepicker').datepicker({
 
 // clientWidth
 
-// -----------------
+// ==============Pagination With Tile Start Here=================//
 const paginationNumbers = document.getElementById("pagination-numbers");
 const paginatedList = document.getElementById("paginated-list");
 const listItems = paginatedList.querySelectorAll("li");
 const nextButton = document.getElementById("next-button");
 const prevButton = document.getElementById("prev-button");
 
-const paginationLimit = 10;
+const paginationLimit = 12;
 const pageCount = Math.ceil(listItems.length / paginationLimit);
 let currentPage = 1;
 
@@ -443,3 +410,4 @@ window.addEventListener("load", () => {
     }
   });
 });
+// ==============Pagination With Tile End Here=================//
