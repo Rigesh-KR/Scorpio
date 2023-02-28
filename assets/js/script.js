@@ -154,38 +154,93 @@ $(".spo-banner__tile-wrap").slick({
     },
   ],
 });
-//   main banner end
-var points = gsap.utils.toArray(".items");
+//   Main banner end
+// ============================Video Transition Start Here
+ScrollTrigger.defaults({
+  markers:false
+})
+
+var points = gsap.utils.toArray('.slides');
+// var indicators = gsap.utils.toArray('.indicator');
+
 var height = 100 * points.length;
+
+// gsap.set('.indicators', {display: "flex"});
+
 var tl = gsap.timeline({
   duration: points.length,
   scrollTrigger: {
-    trigger: ".spo-VT",
+    trigger: ".transition",
     start: "top bottom",
-    end: "+=" + height + "%",
+    end: "+="+height+"%",
     scrub: true,
-    id: "points"
+    id: "points",
   }
-});
+})
+
 var pinner = gsap.timeline({
   scrollTrigger: {
-    trigger: ".spo-VT .spo-VT-col",
+    trigger: ".transition .transition-in",
     start: "top top",
-    end: "+=" + height + "%",
-    scrub: false,
-    pin: ".spo-VT .spo-VT-col",
+    end: "+="+height+"%",
+    scrub: true,
+    pin: ".transition .transition-in",
     pinSpacing: true,
-    id: "pinning",
+    // id: "pinning",
+    // markers: true
   }
-});
+})
 
-points.forEach(function (elem, i) {
-  gsap.set(elem, { position: "absolute", top: 0 });
-  tl.from(elem.querySelector("video"), { autoAlpha: 0 }, i);
-  if (i != points.length - 1) {
+
+
+points.forEach(function(elem, i) {
+  gsap.set(elem, {position: "absolute", top: 0});
+
+  // tl.to(indicators[i], {backgroundColor: "orange", duration: 0.25}, i)
+  tl.from(elem.querySelector('video'), {autoAlpha:0}, i)
+  tl.from(elem.querySelector('.heading'), {autoAlpha:0, translateY: 100}, i)
+  
+  if (i != points.length-1) {
+    // tl.to(indicators[i], {backgroundColor: "#adadad", duration: 0.25}, i+0.75)
+    tl.to(elem.querySelector('.heading'), {autoAlpha:0, translateY: -100}, i + 0.75)
     tl.to(elem.querySelector("video"), { autoAlpha: 0, scale: 1.5 }, i + 0.90);
   }
+  
 });
+// ============================Video Transition End  Here ==============================
+
+// var points = gsap.utils.toArray(".items");
+// var height = 100 * points.length;
+// var tl = gsap.timeline({
+//   duration: points.length,
+//   scrollTrigger: {
+//     trigger: ".spo-VT",
+//     start: "top bottom",
+//     end: "+=" + height + "%",
+//     scrub: true,
+//     id: "points"
+//   }
+// });
+// var pinner = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".spo-VT .spo-VT-col",
+//     start: "top top",
+//     end: "+=" + height + "%",
+//     scrub: false,
+//     pin: ".spo-VT .spo-VT-col",
+//     pinSpacing: true,
+//     id: "pinning",
+//   }
+// });
+
+// points.forEach(function (elem, i) {
+//   gsap.set(elem, { position: "absolute", top: 0 });
+//   tl.from(elem.querySelector("video"), { autoAlpha: 0 }, i);
+//   if (i != points.length - 1) {
+//     tl.to(elem.querySelector("video"), { autoAlpha: 0, scale: 1.5 }, i + 0.90);
+//   }
+// });
+
 $('.product-w').slick({
   dots: true,
   infinite: false,
