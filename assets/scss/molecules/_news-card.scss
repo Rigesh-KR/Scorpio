@@ -56,3 +56,20 @@
         }
     }
 }
+@include mobile{
+    .spo-news-tile {
+        &__cnt {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        &__title {
+            font-size: 14px;
+            min-height: 50px;
+        }
+        &__link, &__date{
+            font-size: 14px;
+            color: #fff;
+        }
+    }
+    
+}

@@ -40,5 +40,12 @@
     &--border {
         border-radius: 5px;
     }
+    &-red{
+        background-color:$color-red;
+        border: 0;
+        &:hover{
+            border: 0;
+        }
+    }
 
 }
