@@ -154,38 +154,60 @@ $(".spo-banner__tile-wrap").slick({
     },
   ],
 });
-//   main banner end
-var points = gsap.utils.toArray(".items");
+//   Main banner end
+// ============================Video Transition Start Here
+ScrollTrigger.defaults({
+  markers:false
+})
+
+var points = gsap.utils.toArray('.slides');
+// var indicators = gsap.utils.toArray('.indicator');
+
 var height = 100 * points.length;
+
+// gsap.set('.indicators', {display: "flex"});
+
 var tl = gsap.timeline({
   duration: points.length,
   scrollTrigger: {
-    trigger: ".spo-VT",
+    trigger: ".transition",
     start: "top bottom",
-    end: "+=" + height + "%",
+    end: "+="+height+"%",
     scrub: true,
-    id: "points"
+    id: "points",
   }
-});
+})
+
 var pinner = gsap.timeline({
   scrollTrigger: {
-    trigger: ".spo-VT .spo-VT-col",
+    trigger: ".transition .transition-in",
     start: "top top",
-    end: "+=" + height + "%",
-    scrub: false,
-    pin: ".spo-VT .spo-VT-col",
+    end: "+="+height+"%",
+    scrub: true,
+    pin: ".transition .transition-in",
     pinSpacing: true,
-    id: "pinning",
+    // id: "pinning",
+    // markers: true
   }
-});
+})
 
-points.forEach(function (elem, i) {
-  gsap.set(elem, { position: "absolute", top: 0 });
-  tl.from(elem.querySelector("video"), { autoAlpha: 0 }, i);
-  if (i != points.length - 1) {
+
+
+points.forEach(function(elem, i) {
+  gsap.set(elem, {position: "absolute", top: 0});
+
+  // tl.to(indicators[i], {backgroundColor: "orange", duration: 0.25}, i)
+  tl.from(elem.querySelector('video'), {autoAlpha:0}, i)
+  tl.from(elem.querySelector('.heading'), {autoAlpha:0, translateY: 100}, i)
+  
+  if (i != points.length-1) {
+    // tl.to(indicators[i], {backgroundColor: "#adadad", duration: 0.25}, i+0.75)
+    tl.to(elem.querySelector('.heading'), {autoAlpha:0, translateY: -100}, i + 0.75)
     tl.to(elem.querySelector("video"), { autoAlpha: 0, scale: 1.5 }, i + 0.90);
   }
+  
 });
+// ============================Video Transition End  Here ==============================
 $('.product-w').slick({
   dots: true,
   infinite: false,
@@ -318,3 +340,105 @@ window.addEventListener('load', () => {
   }
 })
 
+
+// ==============Pagination With Tile Start Here=================//
+const paginationNumbers = document.getElementById("pagination-numbers");
+const paginatedList = document.getElementById("paginated-list");
+const listItems = paginatedList.querySelectorAll("li");
+const nextButton = document.getElementById("next-button");
+const prevButton = document.getElementById("prev-button");
+
+const paginationLimit = 12;
+const pageCount = Math.ceil(listItems.length / paginationLimit);
+let currentPage = 1;
+
+const disableButton = (li) => {
+  li.classList.add("disabled");
+  li.setAttribute("disabled", true);
+};
+
+const enableButton = (li) => {
+  li.classList.remove("disabled");
+  li.removeAttribute("disabled");
+};
+
+const handlePageButtonsStatus = () => {
+  if (currentPage === 1) {
+    disableButton(prevButton);
+  } else {
+    enableButton(prevButton);
+  }
+
+  if (pageCount === currentPage) {
+    disableButton(nextButton);
+  } else {
+    enableButton(nextButton);
+  }
+};
+
+const handleActivePageNumber = () => {
+  document.querySelectorAll(".pagination-number, .spo-pagn__link").forEach((li) => {
+    li.classList.remove("active");
+    const pageIndex = Number(li.getAttribute("page-index"));
+    if (pageIndex == currentPage) {
+      li.classList.add("active");
+    }
+  });
+};
+
+const appendPageNumber = (index) => {
+  const pageNumber = document.createElement("li");
+  pageNumber.className = "spo-pagn__link";
+  pageNumber.innerHTML = index;
+  pageNumber.setAttribute("page-index", index);
+  pageNumber.setAttribute("aria-label", "Page " + index);
+
+  paginationNumbers.appendChild(pageNumber);
+};
+
+const getPaginationNumbers = () => {
+  for (let i = 1; i <= pageCount; i++) {
+    appendPageNumber(i);
+  }
+};
+
+const setCurrentPage = (pageNum) => {
+  currentPage = pageNum;
+
+  handleActivePageNumber();
+  handlePageButtonsStatus();
+  
+  const prevRange = (pageNum - 1) * paginationLimit;
+  const currRange = pageNum * paginationLimit;
+
+  listItems.forEach((item, index) => {
+    item.classList.add("hiddenPag");
+    if (index >= prevRange && index < currRange) {
+      item.classList.remove("hiddenPag");
+    }
+  });
+};
+
+window.addEventListener("load", () => {
+  getPaginationNumbers();
+  setCurrentPage(1);
+
+  prevButton.addEventListener("click", () => {
+    setCurrentPage(currentPage - 1);
+  });
+
+  nextButton.addEventListener("click", () => {
+    setCurrentPage(currentPage + 1);
+  });
+
+  document.querySelectorAll(".pagination-number, .spo-pagn__link").forEach((li) => {
+    const pageIndex = Number(li.getAttribute("page-index"));
+
+    if (pageIndex) {
+      li.addEventListener("click", () => {
+        setCurrentPage(pageIndex);
+      });
+    }
+  });
+});
+// ==============Pagination With Tile End Here=================//

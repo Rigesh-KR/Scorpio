@@ -14,13 +14,14 @@
       max-width: 300px;
       margin-top: -16px;
       .select-selected{
-        padding-left: 60px;
+        padding-left:70px;
         background-color: transparent;
       }
       label{
         position: absolute;
         top: 7px;
-        color: #999999;
+        color: #ffffff;
+        text-transform: uppercase;
       }
       .select-items div:hover,
          .same-as-selected {
@@ -31,6 +32,8 @@
     .spo-selectBox .select-items div{
       text-align: left;
       padding: 5px 0 5px 60px;
+      text-transform: uppercase;
+      font-size: 12px;
     }
     .select-items{
       border: 1px solid $color-grey;
@@ -40,7 +43,7 @@
   &__tile-wrap-page{
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -8px;
+    margin: 0 -16px;
     .spo-news-tile{
       width: calc(33.33% - $spacer-5);
       margin: 0 $spacer-3;
@@ -53,14 +56,28 @@
 }
 @include mobile{
   .spo-happenings-page{
-      .spo-news-tile{
-          &__title{
-              font-size: 14px;
-          }
-          width: calc(50% - $spacer-5);
-          &__date{
-            margin-top: 0;
-          }
+    &__tile-wrap-page{
+      margin:0px -5px;
+    }
+    .spo-news-tile__cnt{
+      margin-bottom:30px;
+    }
+    .spo-news-tile{
+      &__title{
+        font-size: 14px;
       }
+      &__link{
+      font-size: 14px;
+      }
+      width: calc(50% - 10px);
+      margin: 0 5px;
+      &__date{
+      margin-top: 0;
+      }
+    }     
+    .spo-news-tile__date{
+      font-size: 14px;
+      font-style: italic;
+    }  
   }
 }
