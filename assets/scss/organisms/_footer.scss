@@ -49,6 +49,8 @@
         pointer-events: none;
         background-color: $color-grey1;
         color: $color-white;
+        font-size: 18px;
+        text-transform: uppercase;
 
         &::before {
             content: none;
@@ -238,7 +240,7 @@
         .spo-accordion__button {
             pointer-events: inherit;
             text-transform: uppercase;
-            font-size: 20px;
+            font-size: 15px;
 
             &::before {
                 content: '';
@@ -247,7 +249,7 @@
 
         &__find {
             width: calc(100% - 16px);
-            text-align: center;
+            text-align: left;
         }
 
         &__explore {
