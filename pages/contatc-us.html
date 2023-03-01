@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="../assets/css/slick.css">
     <link rel="stylesheet" href="../assets/css/slick-theme.css">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    
     <link rel="stylesheet" href="../assets/css/style.css" />
     <!-- styles -->
     <title>Contact Us, ebike store near me | Scorpio Electric</title>
 </head>
 
-<body class="spo-body spo-aboutus">
+<body class="spo-body">
     <!-- body content start -->
     <!-- Navbar Start Here-->
     <div id="CanvasNav" class="spo-overlay" onclick="closeOffcanvas()"></div>
@@ -71,7 +72,7 @@
                 </div>
                 <ul class="spo-header__quickNav">
                     <li class="spo-header__quickNav-item">
-                        <a href="../pages/X1.html" class="spo-header__quickNav-link">X1</a>
+                        <a href="../pages/X1.html" class="spo-btn spo-header__quickNav-link spo-header__quickNav-quickLink">X1</a>
                     </li>
                     <li class="spo-header__quickNav-item ">
                         <a href="../pages/order-now.html"
@@ -79,23 +80,22 @@
                     </li>
                 </ul>
                 <div class="spo-header__R">
-                    <span class="spo-header__toggler" onclick="openNav()">&#9776;</span>
                     <span class="spo-header__cart">
                         <a href=""><img src="../assets/images/cart-icn.svg" alt="Scorpio Cart"
                                 class="spo-header__cart-img"></a>
                     </span>
+                    <span class="spo-header__toggler" onclick="openNav()">&#9776;</span>
                 </div>
             </div>
         </div>
     </div>
     <!-- Navbar End Here -->
     <div class="contact-warp">
-        <div class="content-wrapper">
-            <h1 class="spo-pageHeading">Contact Us</h1>
+        <div class="content-wrapper">  
         <div class="spo-cnt">
             <div class="spo-cnt-L">
                 <div class="spo-map">
-                    <img src="../assets/images/map.png" alt="" class="w-100">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7491726150156!2d103.73634431399773!3d1.3264461620215384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1b8830acda41%3A0xc0835ade12f6f42a!2sScorpio%20Electric!5e0!3m2!1sen!2sin!4v1677575792289!5m2!1sen!2sin" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="spo-cnt-address">
                     <h3 class="spo-cnt-address-title">SCORPIO ELECTRIC PTE LTD</h3>
@@ -103,36 +103,47 @@
                     <h3 class="spo-cnt-address-title">Phone</h3>
                     <p class="spo-cnt-address-text">69708004</p>
                     <h3 class="spo-cnt-address-title">Office Hours</h3>
-                    <p class="spo-cnt-address-text">Mon - Fri 9.00am - 5pm</p>
+                    <p class="spo-cnt-address-text mb-0">Mon - Fri 9.00am - 5pm</p>
                 </div>
             </div>
 
             <div class="spo-cnt-R">
                 <div class="spo-form">
-                    <h2 class="spo-moduletitle mb-3">Enquiry</h2>
+                    <h1 class="spo-pageHeading">Enquiry</h1>
+                    <!-- <h2 class="spo-moduletitle mb-3">Enquiry</h2> -->
                     <div class="spo-input">
                         <input type="text" class="spo-input__text" required>
                         <label for="" class="spo-input__label">First Name</label>
                      </div>
                      <div class="spo-input">
                         <input type="text" class="spo-input__text" required>
-                        <label for="" class="spo-input__label">Email</label>
+                        <label for="" class="spo-input__label">LAST NAME</label>
                      </div>
                      <div class="spo-input">
                         <input type="text" class="spo-input__text" required>
-                        <label for="" class="spo-input__label">Phone</label>
+                        <label for="" class="spo-input__label">Email address</label>
+                     </div>
+                     <div class="spo-bookride__form-inputwrap mb-5">
+                        <div class="spo-selectBox">
+                           <select name="" id="" class="spo-bookride__form-select">
+                              <option value="" class="spo-bookride__form-select-opt" disabled selected>Subject</option>
+                              <option value="" class="spo-bookride__form-select-opt">Subject 1</option>
+                              <option value="" class="spo-bookride__form-select-opt">Subject 2</option>
+                              <option value="" class="spo-bookride__form-select-opt">Subject 3</option>
+                           </select>
+                        </div>      
                      </div>
                     <div class="spo-input-box ">
-                        <div class="spo-input">
-                            <label for="" class="spo-input__label top-0">Comments</label>
-                            <textarea class="spo-input__text spo-input__tarea pt-4" rows="100" cols="200"></textarea>
+                        <div class="spo-input ">
+                            <!-- <label for="" class="spo-input__label top-0">Comments</label> -->
+                            <textarea class="spo-input__text spo-input__tarea" >Message</textarea>
                             
                         </div>
                     </div>
                     <div class="spo-cnt-capcha">
-                        <img src="../assets/images/capcha.png" alt="" class="">
+                        <img src="../assets/images/capcha.png" alt="" class="w-100">
                     </div>
-                    <a href="#" class="spo-btn">Submit</a>
+                    <a href="#" class="spo-btn spo-btn-red w-100">Submit</a>
                 </div>
             </div>
         </div>
@@ -245,11 +256,30 @@
     </div>
     <!-- footer end -->
     <!-- body content end -->
-
+    <div style="font-size: 0; display: none; visibility: hidden;">
+    <ul id="paginated-list">
+        </ul>
+        <div class="spo-pagn__out">
+            <div class="pagination spo-pagn">
+              <div class="spo-pagn__link" id="prev-button" aria-label="Previous page" title="Previous page">
+                <span aria-hidden="true">&laquo;</span>
+              </div>
+  
+              <ul id="pagination-numbers" class="pagination spo-pagn">
+  
+              </ul>
+  
+              <div class="spo-pagn__link" id="next-button" aria-label="Next page" title="Next page">
+                <span aria-hidden="true">&raquo;</span>
+              </div>
+            </div>
+          </div>
+        </div>
     <!-- scripts -->
     <script src="../assets/js/jquery.slim.min.js"></script>
     <script src="../assets/js/aos.js"></script>
     <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/gijgo.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js'></script>

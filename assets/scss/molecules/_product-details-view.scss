@@ -41,3 +41,10 @@
         font-weight:$font-bold;
     }
 }
+@include mobile{
+    .spo-productsView{
+        &__price{
+            color: $color-white;
+        }
+    }
+}

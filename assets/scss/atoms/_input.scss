@@ -7,7 +7,7 @@
     &__text {
        color: $color-white;
        border: none;
-       border-bottom: 2px solid $color-white;
+       border-bottom: 2px solid $color-grey4;
        width: 100%;
        background-color: transparent;
        height: 35px;
@@ -27,10 +27,11 @@
     &__label {
        pointer-events: none;
        position: absolute;
-       top: 10px;
+       top:5px;
        left: 0;
        color: $color-grey3;
        transition: all .3s ease-in-out;
+       text-transform: uppercase;
     }
     &__filewrap {
       position: relative;
@@ -64,6 +65,17 @@
       &::file-selector-button {
         display: none;
       }
+    }
+  &__txtA{
+    color: $color-grey3;
+    text-transform: uppercase;
+  }
+  &__tarea{
+      height:250px;
+      border: 2px solid $color-grey4;
+      padding: 10px;
+      color: $color-grey3;
+      text-transform: uppercase;
     }
 }
 @include mobile{
