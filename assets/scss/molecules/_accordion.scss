@@ -1,0 +1,60 @@
+.spo-accordion {
+    &__item {
+        border-bottom: 1px solid $color-grey;
+        background: $color-white;
+    }
+
+    &__button {
+        font-size: 22px;
+        font-weight: $font-bold;
+        color: $color-grey;
+        padding: $spacer-3 0;
+
+        &:not(.collapsed),
+        &[aria-expanded="true"] {
+            color: $color-red;
+            background-color: transparent;
+            box-shadow: none;
+
+            &::before {
+                // background-image: url("../images/minus-icn.svg");
+                background-image: url("../images/minus-icn-white.svg");
+            }
+        }
+
+        &:focus {
+            box-shadow: none;
+            z-index: 1;
+        }
+
+        &:hover {
+            z-index: 1;
+        }
+
+        &::after {
+            display: none;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            // background-image: url("../images/plus-icn.svg");
+            background-image: url("../images/plus-icn-white.svg");
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-position-y: 50%;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__body {
+        padding: 0 $spacer-3 $spacer-3 0;
+    }
+
+    .spo-btn {
+        max-width: 250px;
+    }
+}

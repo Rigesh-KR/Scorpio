@@ -12,10 +12,15 @@
 @import "./atoms/button";
 @import "./atoms/select-box";
 @import "./atoms/pagination";
+@import "./atoms/input";
 // molecule
 @import "./molecules/news-card";
 @import "./molecules/merch-tile";
 @import "./molecules/modal-popup";
+@import "./molecules/product-details-view";
+@import "./molecules/accordion";
+@import "./molecules/shoppingCart-tile";
+
 // organisms
 @import "organisms/navbar";
 @import "organisms/footer";
@@ -32,9 +37,18 @@
 @import "./organisms/shop";
 @import "./organisms/bookride";
 @import "./organisms/happenings-page";
-@import "./organisms/happenings-details";
 @import "./organisms/pageDetails";
 @import "./organisms/merch-page";
+@import "./organisms/merch-details";
 @import "./organisms/our-management";
 @import "./organisms/aboutus-page";
+@import "./organisms/contact-page";
+@import "./organisms/career";
+@import "./organisms/apply";
+@import "./organisms/orderNow-page";
+@import "./organisms/shipping-details";
+@import "./organisms/shoppingCart-page";
+@import "./organisms/shoppingCart-tile-wrap";
+@import "./organisms/privacy-policy";
+@import "./organisms/terms-conditions";
 // pages

@@ -1,16 +1,33 @@
 .spo-bookride {
+   position: relative;
    color: $color-white;
    background-color: $color-black;
-   position: relative;
+   background-repeat: no-repeat;
+   background-position: top right;
+   background-size: contain;
+
+   &__overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-position: -250px top;
+   }
+
    &__contents {
       display: flex;
       padding: $spacer-6 $spacer-0;
-      min-height: 100vh;
    }
 
    &__form,
    &__model {
       width: 50%;
+      position: relative;
+   }
+
+   &__form {
+      margin-right: $spacer-4;
    }
 
    &__form-wrap {
@@ -67,7 +84,7 @@
             display: flex;
             align-items: center;
             color: $color-grey3;
-            background-color: $color-black;
+            background-color: transparent;
             height: 35px;
             width: 100%;
             border-bottom: 2px solid $color-white;
@@ -116,8 +133,119 @@
          .select-items div:hover,
          .same-as-selected {
             background-color: $color-red;
-
          }
       }
+
+      .spo-bookride__form-datepickwrap {
+         position: relative;
+
+         .spo-bookride__form-datepickinp {
+            position: relative;
+            border: none;
+            color: $color-white;
+            background-color: transparent;
+            height: 35px;
+            padding: 0;
+            width: 100%;
+            border-radius: 0;
+            border-bottom: 2px solid $color-white;
+
+            &::placeholder {
+               color: $color-grey3;
+            }
+
+            &+button {
+               display: none;
+            }
+         }
+
+         &::after {
+            position: absolute;
+            content: "";
+            top: 14px;
+            right: 10px;
+            width: 0px;
+            height: 0px;
+            border: 6px solid transparent;
+            border-color: $color-white transparent transparent transparent;
+         }
+
+         &--open {
+            &::after {
+               border-color: transparent transparent $color-white transparent;
+               top: 7px;
+            }
+         }
+      }
+   }
+
+   &__model-imgsec {
+      img {
+         width: 100%;
+         height: auto;
+      }
+   }
+}
+
+@include mobile {
+   .spo-bookride {
+      &__contents {
+         flex-direction: column-reverse;
+      }
+
+      &__form,
+      &__model {
+         width: 100%;
+      }
+
+      &__form {
+         margin-top: $spacer-4;
+      }
+
+      &__form-wrap {
+         max-width: 100%;
+      }
+   }
+}
+
+.gj-picker {
+   color: $color-white;
+   background-color: $color-black;
+}
+
+
+.gj-picker-bootstrap table tr td.other-month div,
+.gj-picker-bootstrap table tr td.selected div,
+.gj-picker-bootstrap table tr td.current-month div {
+   border-radius: 50%;
+   overflow: hidden;
+
+   &:hover {
+      color: $color-white;
+      background-color: $color-red;
+      border-radius: 50%;
+   }
+}
+
+.gj-picker-bootstrap table tr td.today div {
+   border-radius: 50%;
+   color: $color-white;
+   background-color: $color-red;
+   overflow: hidden;
+   opacity: .5;
+
+   &:hover {
+      border-radius: 50%;
+   }
+}
+
+.gj-picker-bootstrap table tr td.selected div {
+   color: $color-white !important;
+   background-color: $color-red !important;
+   border-radius: 50% !important;
+
+   &:hover {
+      color: $color-white;
+      background-color: $color-red;
    }
 }

@@ -8,7 +8,7 @@
     &__video {
         position: absolute;
         width: 100%;
-        height: auto;
+        height: 100%;
         top: 0;
         left: 0;
 
@@ -23,7 +23,7 @@
     }
 
     &__left {
-        width: 50%;
+        width: 55%;
     }
 
     &__right {
@@ -86,9 +86,28 @@
 
 @include mobile {
     .spo-mob-ign {
+        &__outer {
+            padding-top: $spacer-5;
+        }
 
         &__left {
             width: 100%;
+        }
+
+        &__features {
+            width: calc(100% - 8px);
+        }
+
+        &__mobonly {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__btnsec {
+            display: flex;
+            justify-content: center;
         }
     }
 }

@@ -4,13 +4,15 @@
   background-position: center top;
   background-repeat: no-repeat;
   background-size: contain;
+  &-nobg{
+    background-image: none;
+  }
 }
 .spo-btmBg{
   background-image:url(../images/page-bg-bottom.png);
   background-position:center bottom;
   background-repeat: no-repeat;
   background-size: contain;
-  min-height:1500px;
 }
 html {
   scroll-behavior: smooth;
@@ -54,6 +56,9 @@ html {
     }
     &.active {
         color: $color-red;
+    }
+    &-normal{
+      text-transform: none;
     }
   }
   &__sub{

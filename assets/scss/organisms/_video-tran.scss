@@ -22,3 +22,13 @@ video {
     left:0;
     top:0;
 }
+@include mobile{
+    .spo-VT{
+       &-col{
+        height: 100%;
+       } 
+       .items{
+        height: auto;
+       }
+    }
+}

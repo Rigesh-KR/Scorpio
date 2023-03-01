@@ -9,6 +9,14 @@
         }
     }
 }
+.spo-innerLink{
+    color: $color-red;
+    text-decoration: underline;
+    &:hover{
+        color: $color-red; 
+        text-decoration: none;
+    }
+}
 .spo-pageDetails{
     padding: $spacer-6 0;
     &__date{

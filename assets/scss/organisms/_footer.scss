@@ -26,15 +26,32 @@
         align-self: center;
         color: $color-grey3;
     }
+
     &__logo {
         //margin-bottom: $spacer-3;
         width: 125px;
         padding: 0 20px 0 0;
         display: flex;
         align-self: center;
+
         img {
             width: 100%;
             height: auto;
+        }
+    }
+
+    .spo-accordion__item {
+        background-color: $color-grey1;
+        border: 0;
+    }
+
+    .spo-accordion__button {
+        pointer-events: none;
+        background-color: $color-grey1;
+        color: $color-white;
+
+        &::before {
+            content: none;
         }
     }
 
@@ -49,35 +66,43 @@
         p {
             // margin-bottom: $spacer-1;
         }
+
     }
 
     &__explore {
         width: calc(50%);
         margin: 0 $spacer-2;
     }
-    &__fndUs{
+
+    &__fndUs {
         margin-bottom: $spacer-2;
         color: $color-grey3;
-        &-subHead{
+
+        &-subHead {
             display: block;
-        } 
+        }
     }
+
     &__listing {
         display: flex;
         flex-wrap: wrap;
     }
-    &__item{
+
+    &__item {
         margin-bottom: $spacer-2;
         color: $color-grey3;
         width: 50%;
         transition: 0.3s;
-        &:last-child{
+
+        &:last-child {
             margin-bottom: 0;
         }
     }
+
     &__link {
         color: $color-grey3;
         transition: 0.3s;
+
         &:hover {
             color: $color-white;
             text-decoration: underline;
@@ -85,16 +110,19 @@
             transition: 0.3s;
         }
     }
+
     &__sechead {
         font-weight: $font-bold;
         font-size: 18px;
         margin-bottom: $spacer-3;
     }
+
     &__social {
         display: flex;
         align-items: center;
         margin: $spacer-3 -10px 0;
     }
+
     &__socialimg {
         width: 20px;
         height: 20px;
@@ -111,10 +139,12 @@
             transition: 0.3s;
         }
     }
+
     &__logosec {
         background-color: $color-grey;
         padding: $spacer-5 0;
     }
+
     &__logoouter {
         display: flex;
         flex-direction: column;
@@ -126,26 +156,34 @@
             color: $color-white;
         }
     }
+
     &__copysec {
         padding: $spacer-3 0;
         background-color: $color-grey;
         color: $color-grey3;
+
+        .spo-footer__social {
+            display: none;
+        }
     }
+
     &__copyouter {
         display: flex;
         justify-content: center;
         margin: 0 -16px;
         font-size: 12px;
     }
+
     &__rights {
         display: flex;
         align-items: center;
-        margin: 0 $spacer-3;
+        // margin: 0 $spacer-3;
 
         p {
-            margin: 0 $spacer-2;
+            // margin: 0 $spacer-2;
         }
     }
+
     &__privacy {
         display: flex;
         align-items: center;
@@ -156,29 +194,65 @@
         }
     }
 }
+
 @include mobile {
     .spo-footer {
         color: $color-grey3;
+
         &__mainsec {
             padding: $spacer-6 0;
             background-color: $color-grey1;
         }
+
         &__outer {
             flex-direction: column;
         }
+
         &__left {
             width: calc(100% - 16px);
             flex-direction: column;
+            margin-bottom: $spacer-3;
         }
+
         &__right {
             width: calc(100% - 16px);
+            margin: 0 $spacer-2;
         }
+
+        &__logo {
+            align-self: flex-start;
+        }
+
+        .spo-accordion__item {
+            border-bottom: 1px solid $color-grey;
+
+            &:last-child {
+                border-bottom: 1px solid $color-grey;
+            }
+
+            .spo-footer__social {
+                display: none;
+            }
+        }
+
+        .spo-accordion__button {
+            pointer-events: inherit;
+            text-transform: uppercase;
+            font-size: 20px;
+
+            &::before {
+                content: '';
+            }
+        }
+
         &__find {
             width: calc(100% - 16px);
             text-align: center;
         }
+
         &__explore {
             width: calc(100% - 16px);
+
             .spo-footer__sechead {
                 display: none;
             }
@@ -187,39 +261,41 @@
         &__listing {
             flex-direction: column;
         }
-        &__item{
+
+        &__item {
             margin-bottom: $spacer-1;
-            padding: $spacer-3 0;
+            padding: $spacer-2 0;
             position: relative;
             width: 100%;
 
-            &::after {
-                position: absolute;
-                content: '';
-                width: calc(100% + 60px);
-                height: 1px;
-                background-color: $color-grey;
-                top: 0;
-                left: -30px;
-            }
+            // &::after {
+            //     position: absolute;
+            //     content: '';
+            //     width: calc(100% + 60px);
+            //     height: 1px;
+            //     background-color: $color-grey;
+            //     top: 0;
+            //     left: -30px;
+            // }
 
-            &:last-child {
-                position: relative;
+            // &:last-child {
+            //     position: relative;
 
-                &::before {
-                    position: absolute;
-                    content: '';
-                    width: calc(100% + 60px);
-                    height: 1px;
-                    background-color: $color-grey;
-                    bottom: 0;
-                    left: -30px;
-                }
-            }
+            //     &::before {
+            //         position: absolute;
+            //         content: '';
+            //         width: calc(100% + 60px);
+            //         height: 1px;
+            //         background-color: $color-grey;
+            //         bottom: 0;
+            //         left: -30px;
+            //     }
+            // }
         }
+
         &__social {
             justify-content: center;
-            margin-bottom: $spacer-3;
+            margin-bottom: $spacer-4;
         }
 
         &__socialimg {
@@ -231,12 +307,14 @@
         }
 
         &__logo {
-            width:80px;
-            img{
-                width:50px;
+            width: 80px;
+
+            img {
+                width: 50px;
             }
         }
-        &__sg-desc{
+
+        &__sg-desc {
             display: flex;
             flex-direction: column;
             align-self: center;
@@ -259,6 +337,13 @@
 
             p {
                 margin: 0 $spacer-1;
+            }
+        }
+
+        &__copysec {
+
+            .spo-footer__social {
+                display: flex;
             }
         }
     }
