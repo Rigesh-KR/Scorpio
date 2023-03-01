@@ -9,11 +9,12 @@
     .select-selected {
        display: flex;
        align-items: center;
-       color: $color-grey3;
-       background-color: $color-black;
-       height: 35px;
+       color: $color-white;
+      //  background-color: $color-black;
+       height: 30px;
        width: 100%;
-       border-bottom: 2px solid $color-white;
+       border-bottom: 2px solid $color-grey4;
+       text-transform: uppercase;
 
        &.disabled {
           color: $color-grey3;
