@@ -411,4 +411,34 @@ window.addEventListener("load", () => {
   });
 });
 // ==============Pagination With Tile End Here=================//
+const accordionBody = document.querySelectorAll('.accordion-collapse');
+const accordionBtn = document.querySelectorAll('.accordion-button');
+// on resize
+window.addEventListener('resize', () => {
+  if (window.innerWidth <= 768) {
+    accordionBody.forEach((e, ele) => {
+      e.classList.remove('show');
+      accordionBtn[ele].ariaExpanded = 'false';
+    })
+  } else {
+    accordionBody.forEach((e, ele) => {
+      e.classList.add('show');
+      accordionBtn[ele].ariaExpanded = 'true';
+    })
+  }
+})
+// on load
+window.addEventListener('load', () => {
+  if (window.innerWidth <= 768) {
+    accordionBody.forEach((e, ele) => {
+      e.classList.remove('show');
+      accordionBtn[ele].ariaExpanded = 'false';
+    })
+  } else {
+    accordionBody.forEach((e, ele) => {
+      e.classList.add('show');
+      accordionBtn[ele].ariaExpanded = 'true';
+    })
+  }
+})
 

@@ -15,7 +15,7 @@
     <title>Buy Riders t-shirts Online, Scorpios Unique design apparels</title>
 </head>
 
-<body class="spo-body pt-0 pe-0">
+<body class="spo-body p-0 m-0">
     <!-- body content start -->
     <!-- Navbar Start Here-->
     <div id="CanvasNav" class="spo-overlay" onclick="closeOffcanvas()"></div>
@@ -41,7 +41,7 @@
                 </ul>
             </li>
             <li class="spo-sidenav__item">
-                <a class="spo-sidenav__link" href="../pages/merch-pag.html">shop</a>
+                <a class="spo-sidenav__link" href="../pages/merch-page.html">shop</a>
             </li>
             <li class="spo-sidenav__item">
                 <a class="spo-sidenav__link" href="../pages/about-us.html">About Us</a>
@@ -99,8 +99,9 @@
         <div class="content-wrapper">
             <h1 class="spo-pageHeading mb-0">Happenings</h1>
             <div class="spo-heading-sub">Designed for our riders. Limited quantities available.</div>
-            <div class="spo-merch-wrap">
-                <div class="spo-merch">
+            
+            <ul id="paginated-list" class="spo-merch-wrap">
+                <li class="spo-merch">
                     <div class="spo-merch__product">
                         <div class="spo-merch__product-tag">exclusive</div>
                         <a href="../pages/merch-details.html"><img src="../assets/images/merch-IMG-1.png"
@@ -119,9 +120,8 @@
                         </div>
                     </div>
                     <a href="#" class="spo-btn">Add to Cart</a>
-                </div>
-                <!-- 1  End-->
-                <div class="spo-merch">
+                </li>
+                <li class="spo-merch">
                     <div class="spo-merch__product">
                         <a href="../pages/merch-details.html">
                             <img src="../assets/images/merch-IMG-2.png" class="d-block w-100" alt="">
@@ -139,9 +139,9 @@
                         </div>
                     </div>
                     <a href="#" class="spo-btn">Add to Cart</a>
-                </div>
+                </li>
                 <!-- 2 End -->
-                <div class="spo-merch">
+                <li class="spo-merch">
                     <div class="spo-merch__product">
                         <a href="../pages/merch-details.html">
                             <img src="../assets/images/merch-IMG-3.png" class="d-block w-100" alt="">
@@ -159,9 +159,9 @@
                         </div>
                     </div>
                     <a href="#" class="spo-btn">Add to Cart</a>
-                </div>
+                </li>
                 <!-- 3 End -->
-                <div class="spo-merch">
+                <li class="spo-merch">
                     <div class="spo-merch__product">
                         <a href="../pages/merch-details.html">
                             <img src="../assets/images/merch-IMG-4.png" class="d-block w-100" alt="">
@@ -179,9 +179,26 @@
                         </div>
                     </div>
                     <a href="#" class="spo-btn">Add to Cart</a>
-                </div>
+                </li>
                 <!-- 4 End -->
-            </div>
+            </ul>
+            <div class="spo-pagn__out">
+                <div class="pagination spo-pagn">
+                  <div class="spo-pagn__link" id="prev-button" aria-label="Previous page" title="Previous page">
+                    <span aria-hidden="true">&laquo;</span>
+                  </div>
+      
+                  <ul id="pagination-numbers" class="pagination spo-pagn">
+      
+                  </ul>
+      
+                  <div class="spo-pagn__link" id="next-button" aria-label="Next page" title="Next page">
+                    <span aria-hidden="true">&raquo;</span>
+                  </div>
+                </div>
+              </div>
+            
+            
         </div>
     </div>
     <!-- footer start -->
@@ -218,7 +235,7 @@
                                     <a href="../pages/career.html" class="spo-footer__link">Careers</a>
                                 </li>
                                 <li class="spo-footer__item">
-                                    <a href="../pages/merch-pag.html"
+                                    <a href="../pages/merch-page.html"
                                         class="spo-footer__link spo-footer__link--first">Merchandise</a>
                                 </li>
                                 <li class="spo-footer__item">
