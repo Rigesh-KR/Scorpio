@@ -44,10 +44,10 @@
     .spo-ourstory {
 
         &__outer {
-            flex-direction: column-reverse;
+            flex-direction: column;
 
             &--inv {
-                flex-direction: column !important;
+                flex-direction: column-reverse !important;
             }
         }
 
