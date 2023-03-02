@@ -1,4 +1,6 @@
-.spo-modal {
+.modal-open{
+    padding-right:0px !important;
+}.spo-modal {
     &__dialog {
         max-width:765px;
     }

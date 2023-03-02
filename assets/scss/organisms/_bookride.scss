@@ -185,6 +185,10 @@
          height: auto;
       }
    }
+   .spo-btn{
+      margin-top: $spacer-4;
+      width: 100%;
+   }
 }
 
 @include mobile {
