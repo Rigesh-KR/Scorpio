@@ -317,18 +317,18 @@ const listItems = paginatedList.querySelectorAll("li");
 const nextButton = document.getElementById("next-button");
 const prevButton = document.getElementById("prev-button");
 
-const paginationLimit = 12;
+const paginationLimit = 10;
 const pageCount = Math.ceil(listItems.length / paginationLimit);
 let currentPage = 1;
 
-const disableButton = (li) => {
-  li.classList.add("disabled");
-  li.setAttribute("disabled", true);
+const disableButton = (button) => {
+  button.classList.add("disabled");
+  button.setAttribute("disabled", true);
 };
 
-const enableButton = (li) => {
-  li.classList.remove("disabled");
-  li.removeAttribute("disabled");
+const enableButton = (button) => {
+  button.classList.remove("disabled");
+  button.removeAttribute("disabled");
 };
 
 const handlePageButtonsStatus = () => {
@@ -346,18 +346,18 @@ const handlePageButtonsStatus = () => {
 };
 
 const handleActivePageNumber = () => {
-  document.querySelectorAll(".pagination-number, .spo-pagn__link").forEach((li) => {
-    li.classList.remove("active");
-    const pageIndex = Number(li.getAttribute("page-index"));
+  document.querySelectorAll(".pagination-number").forEach((button) => {
+    button.classList.remove("active");
+    const pageIndex = Number(button.getAttribute("page-index"));
     if (pageIndex == currentPage) {
-      li.classList.add("active");
+      button.classList.add("active");
     }
   });
 };
 
 const appendPageNumber = (index) => {
-  const pageNumber = document.createElement("li");
-  pageNumber.className = "spo-pagn__link";
+  const pageNumber = document.createElement("button");
+  pageNumber.className = "pagination-number spo-pagn__link";
   pageNumber.innerHTML = index;
   pageNumber.setAttribute("page-index", index);
   pageNumber.setAttribute("aria-label", "Page " + index);
@@ -376,7 +376,7 @@ const setCurrentPage = (pageNum) => {
 
   handleActivePageNumber();
   handlePageButtonsStatus();
-
+  
   const prevRange = (pageNum - 1) * paginationLimit;
   const currRange = pageNum * paginationLimit;
 
@@ -400,11 +400,11 @@ window.addEventListener("load", () => {
     setCurrentPage(currentPage + 1);
   });
 
-  document.querySelectorAll(".pagination-number, .spo-pagn__link").forEach((li) => {
-    const pageIndex = Number(li.getAttribute("page-index"));
+  document.querySelectorAll(".pagination-number").forEach((button) => {
+    const pageIndex = Number(button.getAttribute("page-index"));
 
     if (pageIndex) {
-      li.addEventListener("click", () => {
+      button.addEventListener("click", () => {
         setCurrentPage(pageIndex);
       });
     }
