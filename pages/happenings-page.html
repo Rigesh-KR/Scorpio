@@ -93,7 +93,7 @@
     <div class="content-wrapper">
       <div class="spo-happenings-page__head-wrap">
         <h1 class="spo-pageHeading">Happenings</h1>
-        <div class="spo-selectBox">
+        <!-- <div class="spo-selectBox">
           <label>Filter by:</label>
           <select name="" id="" class="spo-bookride__form-select">
             <option value="" class="spo-bookride__form-select-opt" selected>All</option>
@@ -101,7 +101,12 @@
             <option value="" class="spo-bookride__form-select-opt">Most recent news</option>
             <option value="" class="spo-bookride__form-select-opt">Most recent events</option>
           </select>
-        </div>
+        </div> -->
+        <select id="selectbox" name="" onchange="javascript:location.href = this.value;">
+          <option value="https://www.yahoo.com/" selected>Option1</option>
+          <option value="https://www.google.co.in/">Option2</option>
+          <option value="https://www.gmail.com/">Option3</option>
+        </select>
       </div>
       <div class="spo-happenings-page__tile-wrap-out">
         <ul id="paginated-list" class="spo-happenings-page__tile-wrap-page">
