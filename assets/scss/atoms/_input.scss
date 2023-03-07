@@ -38,21 +38,21 @@
       
       .spo-input__filebtn {
         position: absolute;
-        background-color: $color-grey2;
+        // background-color: $color-grey2;
         right: 0;
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
-        padding: 3px 8px;
-        min-width: 20%;
+        // padding: 3px 8px;
+        // min-width: 20%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
   
         svg {
-          width: 25px;
-          height: 25px;
+          width: 18px;
+          height: 18px;
         }
       }
   

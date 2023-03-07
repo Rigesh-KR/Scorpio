@@ -24,7 +24,7 @@
         src="../assets/images/close-btn.png" alt="Close"></a>
     <ul class="spo-sidenav-col">
       <li class="spo-sidenav__item">
-        <a class="spo-sidenav__link" href="/index.html">Home</a>
+        <a class="spo-sidenav__link" href="../index.html">Home</a>
       </li>
       <li class="spo-sidenav__item">
         <a class="spo-sidenav__link" href="#">Models</a>
@@ -127,21 +127,26 @@
                         <div class="spo-input__filewrap">
                             <input class="spo-input__file spo-input__text" type="file" id="spo-file">
                             <label for="spo-file" class="spo-input__filebtn">
-                                <svg width="39" height="39" viewBox="0 0 39 39" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <path d="M38.5 0.5H0.5V38.5H38.5V0.5Z" fill="url(#pattern0)" />
-                                    <defs>
-                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1"
-                                            height="1">
-                                            <use xlink:href="#image0_108_3" transform="scale(0.01)" />
-                                        </pattern>
-                                        <image id="image0_108_3" width="100" height="100"
-                                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAAXNSR0IArs4c6QAAAUtJREFUeJzt3LFNxEAQQNEBkdPAZYRXDLVQCYUcCQWR0cBVADGRfWDsH7wnbTbByF+y5MA7AwAAsK+7oxf4pdPMvC7MvMzM5w67MDPnmflaOOfDtvuD+6MX4CdBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJeVgxc5qZx/9e5EZPG83s7Tob/Ih6meUfLJ1157L0sL2yYgSJESRGkBhBYgSJESRmzW1A1Q/D94WZ55n52GGXW2zyYVjkNiD2IUiMIDGCxAgSI0iMIDGCxAgSI0iMIDGCxAgSI0iMIDGCxAgSI0iMIDGCxAgSI0iMIDGCxAgSI0iMIDGCxAgSI0iMIDGCxAgSI0iMIDFrbgMqus7M24oZAAAAFnwDVGBvGThXfVIAAAAASUVORK5CYII=" />
-                                    </defs>
+                              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_203_4)">
+                                <path d="M6.925 17.22V11.1125H0.904999V6.87749H6.925V0.769989H11.3175V6.87749H17.355V11.1125H11.3175V17.22H6.925Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_203_4">
+                                <rect width="18" height="18" fill="white"/>
+                                </clipPath>
+                                </defs>
                                 </svg>
                             </label>
                         </div>
                     </div>
+                    <div class="spo-input ">
+                      <!-- <label for="" class="spo-input__label top-0">Comments</label> -->
+                      <textarea class="spo-input__text spo-input__tarea" placeholder="MESSAGE" 
+                      onfocus="this.placeholder=''" 
+                      onblur="this.placeholder='MESSAGE'" ></textarea>
+                      
+                  </div>
                 
                 <div class="spo-cnt-capcha">
                     <img src="../assets/images/capcha.png" alt="" class="">
@@ -300,6 +305,7 @@
     <script src="../assets/js/jquery.slim.min.js"></script>
     <script src="../assets/js/aos.js"></script>
     <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/gijgo.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js'></script>
