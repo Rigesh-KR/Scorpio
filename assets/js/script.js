@@ -309,8 +309,8 @@ $('#datepicker').datepicker({
 });
 
 // clientWidth
-const accordionBody = document.querySelectorAll('.accordion-collapse');
-const accordionBtn = document.querySelectorAll('.accordion-button');
+const accordionBody = document.querySelectorAll('.spo-footer .accordion-collapse');
+const accordionBtn = document.querySelectorAll('.spo-footer .accordion-button');
 // on resize
 window.addEventListener('resize', () => {
   if (window.innerWidth <= 768) {

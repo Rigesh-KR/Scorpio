@@ -40,18 +40,18 @@
     }
 
     .accordion-button:not(.collapsed) {
-        background-color: $color-black;
+        // background-color: $color-black;
         color: $color-white;
     }
 
     .accordion-item {
-        background-color: $color-black;
-        border-bottom: 1px solid $color-grey;
+        background-color: transparent;
+        border-bottom: 1px solid $color-grey3;
 
     }
 
     .accordion-button {
-        background-color: $color-black;
+        background-color: transparent;
         color: $color-white;
         font-size: 18px;
         font-weight: $font-bold;
