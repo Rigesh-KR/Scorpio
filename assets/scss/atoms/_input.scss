@@ -18,9 +18,9 @@
           transform: translateY(-20px);
        }
 
-       &:required~.spo-input__label::after {
-          content: "*";
-       }
+      //  &:required~.spo-input__label::after {
+      //     content: "*";
+      //  }
 
     }
 
@@ -76,6 +76,9 @@
       padding: 10px;
       color: $color-grey3;
       text-transform: uppercase;
+      :focus{
+        outline: none;
+      }
     }
 }
 @include mobile{

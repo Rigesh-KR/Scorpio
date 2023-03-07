@@ -1,0 +1,16 @@
+.spo-adminFilter{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    &-seldrop{
+        width: 100%;
+        display: flex;
+        flex: 1;
+    }
+    &-label{
+        margin-right: $spacer-2;
+    }
+    &-btnSec{
+        align-items: flex-end;
+    }
+}

@@ -136,12 +136,14 @@
                     <div class="spo-input-box ">
                         <div class="spo-input ">
                             <!-- <label for="" class="spo-input__label top-0">Comments</label> -->
-                            <textarea class="spo-input__text spo-input__tarea" >Message</textarea>
+                            <textarea class="spo-input__text spo-input__tarea" placeholder="MESSAGE" 
+                            onfocus="this.placeholder=''" 
+                            onblur="this.placeholder='MESSAGE'" ></textarea>
                             
                         </div>
                     </div>
                     <div class="spo-cnt-capcha">
-                        <img src="../assets/images/capcha.png" alt="" class="w-100">
+                      <div class="g-recaptcha" style="transform: scale(0.85); -webkit-transform: scale(0.85); transform-origin: 0 0; -webkit-transform-origin: 0 0;" data-theme="light" data-sitekey="6LeoNS4jAAAAAC1HNqGVYjqelGl0GdCBUOLqSuOm"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LeoNS4jAAAAAC1HNqGVYjqelGl0GdCBUOLqSuOm&amp;co=aHR0cDovL3Njb3JwaW9lY29tLnN0cmF0LXN0YWdpbmcuY29tOjgw&amp;hl=en&amp;v=8G7OPK94bhCRbT0VqyEVpQNj&amp;theme=light&amp;size=normal&amp;cb=88b8xhqgxfxg" width="304" height="78" role="presentation" name="a-xek717nypthk" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px;height: 40px;border: 1px solid rgb(193, 193, 193);margin: 10px 25px;padding: 0px;resize: none;display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
                     </div>
                     <a href="#" class="spo-btn spo-btn-red w-100">Submit</a>
                 </div>
