@@ -201,7 +201,9 @@
       &__model {
          width: 100%;
       }
-
+      &__model{
+         display: none;
+      }
       &__form {
          margin-top: $spacer-4;
       }
