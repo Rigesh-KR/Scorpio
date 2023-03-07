@@ -1,8 +1,12 @@
 .spo-shipping{
     display: flex;
+    justify-content: space-between;
     &__details{
-        width: 40%;
+        width: 45%;
         // font-size: 0;
+    .spo-moduletitle{
+        margin-bottom: $spacer-4;
+    }
     }
     .spo-input__label{
         font-weight: $font-light;
@@ -17,12 +21,14 @@
         padding: 0 12px 0 10px;
     }
     &__summary{
-        padding-left: $spacer-6;
+        // padding-left: $spacer-6;
         color: $color-white;
+        width: 45%;
         .spo-title{
             font-size: 25px;
+            text-transform: uppercase;
             &-top{
-                margin-bottom:38px;
+                margin-bottom:0;
                 display: flex;
                 align-items: center;
             }
@@ -31,18 +37,25 @@
             }
         }
         &-items{
-            font-size: 15px;
-            font-weight: $font-light;
-            border-left:  2px solid $color-grey;
-            padding-left: 10px;
-            margin-left:10px;
+            font-size: 20px;
+            font-weight: $font-thin;
+            text-transform: uppercase;
+            margin-bottom: $spacer-5;
+            display: flex;
         }
         &-box{
             margin-bottom: 20px;
+            .spo-input__text{
+                width: 110px;
+            }
         }
         &-text{
             font-size: 15px;
             font-weight: $font-light;
+        }
+        &-price{
+            font-size:25px;
+            font-weight: $font-thin;
         }
     }
     &__title{
@@ -50,9 +63,10 @@
         font-weight: $font-bold;
     }
     &-gtotal{
-        border-top: 1px solid $color-grey;
-        border-bottom: 1px solid $color-grey;
-        padding: 10px 0;
+        border-top: 1px solid #abacad;
+        border-bottom: 1px solid #abacad;
+        padding:$spacer-4 0;
+        margin-bottom: $spacer-5;
         .spo-shipping__summary-text{
             font-size: 35px;
             font-weight: $font-bold;
@@ -68,6 +82,7 @@
         }
         &__summary{
             padding-left: 0;
+            width: 100%;
         }
     }
 }
