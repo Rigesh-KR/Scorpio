@@ -67,8 +67,10 @@
         }
         &__cnt{
             width: 100%;
+            text-align: center;
         }
         &__bnt-wrap{
+            justify-content: center;
             .spo-btn{
                 width: unset;
                 margin: 0;
