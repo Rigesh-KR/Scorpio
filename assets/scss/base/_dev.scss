@@ -1,6 +1,173 @@
 .spo-dev{
-    .dxeButtonEdit_Moderno{
-        background-color: none;
+    .dxeButtonEdit_Moderno td.dxic{
+        padding: 0 !important;
+    }
+    .spo-select{
+        .dxeButtonEditSys.dxeButtonEdit_Moderno{
+            .dxic{
+            position: relative;
+            border-bottom: 2px solid $color-grey4;
+            padding: 0;
+            &:after {
+                position: absolute;
+                content: "";
+                top:14px;
+                right: 0px;
+                width: 0;
+                height: 0;
+                border: 6px solid transparent;
+                border-color: $color-white transparent transparent transparent;
+             }
+            }
+        }
+    }
+    .spo-merch-details, .spo-bookride__form{
+        .dxeButtonEdit_Moderno{
+            background: none;
+            border: none;
+            position: relative;
+            input{
+                background: none;
+                border: none;
+                color: $color-white;
+                font-size: 14px;
+                text-transform: uppercase;
+                height: 30px;
+                margin: 0;
+            }
+            .dxEditors_edtDropDown_Moderno{
+                display: none;
+            }
+            .dxeButton.dxeButtonEditButton_Moderno{
+                // background: none;
+                // background: red;
+            }
+        }
+        .dxeButton{
+            position: absolute;
+            right: 0;
+            background: none;
+            border: none;
+            padding: 0;
+            &:hover{
+                background: none;
+                border: none;
+                box-shadow: none;
+            }
+        }
+        .dxeListBox_Moderno{
+            background-color: $color-grey1;
+            border: 0;
+            cursor: pointer;
+            text-align: center;
+            color: #ffffff;
+        }
+        .dxeListBoxItem_Moderno{
+            border: none;
+        }    
+        .dxeListBoxItemSelected_Moderno{
+            background-color: $color-red;
+        }
+        .dxeListBoxItemHover_Moderno{
+            background-color: $color-red;
+        }
+    }
+    .spo-bookride__form{
+        .dxeButton{
+            position: absolute;
+            right:6px;;
+            top: 6px;
+            background: none;
+            border: none;
+            padding: 0;
+            height: 20px;
+            width: 100%;
+            z-index: 5;
+            cursor: pointer;
+            &:hover{
+                background: none;
+                border: none;
+                box-shadow: none;
+            }
+        }
+    }
+    .dxeCalendarHeader_Moderno{
+        background: $color-black;
         border: none;
+        color: $color-white;
+        .dxEditors_edtCalendarPrevYear_Moderno, .dxEditors_edtCalendarNextYear_Moderno{
+            display: none;
+        }
+        td.dxe{
+            color: $color-white;
+            font-weight: $font-medium;
+            vertical-align: top;
+        }
+    }
+    .dxeCalendarFooter_Moderno{
+        display: none;
+    }
+    .dxeCalendarDayHeader_Moderno{
+        color: $color-white;
+    }
+    .dxeCalendar_Moderno{
+        background: $color-black;
+        border: 1px solid #666666;
+        color: $color-white;
+        .dxeCalendarSelected_Moderno{
+            &::after{
+                background-color: red;
+            }
+        }
+        .dxeCalendarWeekend_Moderno{
+            color: $color-white;  
+        }
+        .dxeCalendarOtherMonth_Moderno{
+            color:$color-grey2;
+        }
+        .dxEditors_edtCalendarNextMonth_Moderno{
+            background-image: url(../images/arrow-sprite.png);
+            background-position: left -46px;
+            background-repeat: no-repeat;
+            background-size: 45%;
+        }
+        .dxEditors_edtCalendarPrevMonth_Moderno{
+            background-image: url(../images/arrow-sprite.png);
+            background-position: 11px 4px;
+            background-repeat: no-repeat;
+            background-size: 45%;
+        }
+        .dxeCalendarDay_Moderno{
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+            font-size: 13px;
+        }
+        .dxeCalendarDay_Moderno.dxeCalendarSelected_Moderno{
+            box-shadow: none;
+            background-color: $color-red;
+            color: $color-white;
+            border-radius: 50%;
+        }
+        .dxeCalendarDay_Moderno.dxeCalendarHover_Moderno{
+            box-shadow: none;
+            background-color: $color-red;
+            color: $color-white;
+            border-radius: 50%;
+        }
+        .dxeCalendarDay_Moderno.dxeCalendarToday_Moderno{
+            border-color: $color-red;
+            border-radius: 50%;
+            box-shadow: inset 0 0 0 1px $color-red;
+        }
+        .dxeCalendarDay_Moderno.dxeCalendarHover_Moderno:not(.dxeCalendarOutOfRange_Moderno):not(.dxeCalendarDayDesabled_Moderno):not(.dxeCalendarSelected_Moderno){
+            box-shadow: none;
+            background-color: $color-red;
+            color: $color-white;
+            border-radius: 50%;
+        }
+        .dxeCalendarWeekNumber_Moderno{
+            color: $color-black;
+        }
     }
 }

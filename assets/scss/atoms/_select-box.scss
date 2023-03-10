@@ -25,7 +25,7 @@
        position: absolute;
        content: "";
        top: 14px;
-       right: 10px;
+       right:0px;
        width: 0;
        height: 0;
        border: 6px solid transparent;
@@ -76,12 +76,16 @@
  }
  .spo{
    &-selectFilter{
+      .spo-sel-label{
+         width: auto;
+      }
       display: flex;
       align-self: flex-start;
       border-bottom: 2px solid $color-grey4;
       text-transform: uppercase; 
       .spo-bookride__form-select-opt{
          // width: 170px;
+         flex: 1;
          width: 100%;
          text-transform: uppercase;
          background: none;
@@ -100,3 +104,25 @@
       font-size: 15px;
    }
  }
+//  =========================
+.spo-select{
+   position: relative;
+   display: flex;
+   align-items: center;
+   color: $color-white;
+   height: 30px;
+   width: 100%;
+   // border-bottom: 2px solid $color-grey4;
+   text-transform: uppercase;
+
+   // &:after {
+   //    position: absolute;
+   //    content: "";
+   //    top: 14px;
+   //    right: 0px;
+   //    width: 0;
+   //    height: 0;
+   //    border: 6px solid transparent;
+   //    border-color: $color-white transparent transparent transparent;
+   // }
+}

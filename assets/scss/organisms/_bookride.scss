@@ -189,6 +189,12 @@
       margin-top: $spacer-4;
       width: 100%;
    }
+   .dxeButtonEditSys{
+      width: 100%;
+   }
+   .spo-select .dxeButtonEditSys.dxeButtonEdit_Moderno .dxic:after{
+      right: 10px;
+   }
 }
 
 @include mobile {
