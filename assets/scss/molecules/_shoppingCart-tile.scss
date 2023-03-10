@@ -11,8 +11,9 @@
     &__body{
         flex-direction: column;
         display: flex;
-        align-self: flex-start;
+        // align-self: flex-start;
         padding-left: $spacer-4;
+        justify-content: space-between;
     }
     &__group{
         margin-bottom: $spacer-3;
@@ -30,6 +31,9 @@
         font-size: 16px;
         color:$color-white;
         font-weight: $font-bold;
+    }
+    &__itemRemove{
+        margin-top: auto;
     }
     &__title{
         font-size: 18px;
