@@ -55,6 +55,13 @@
             margin-bottom: $spacer-2;
         }
     }
+    p{
+        font-size: 13px;
+        margin-bottom: $spacer-3;
+        color: $color-white;
+        line-height: $spacer-3;
+        font-weight: $font-thin;
+    }
     &__listing{
         list-style: none;
         margin:$spacer-1 0 $spacer-3 0;
